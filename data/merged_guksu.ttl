@@ -46,7 +46,7 @@ axa:M_101 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "전동 게이트 밸브, 250A×10K(1MPa)"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235381.22 545836.72)" ;
+    geo:asWKT "POINT(234467.07 545740.21)" ;
     rdfs:comment "MOP 부착형"@ko .
 
 axa:M_102 a ax:Asset ;
@@ -64,7 +64,7 @@ axa:M_102 a ax:Asset ;
         "med" ;
     ax:spec "침사및협잡물종합처리기, 세목100, 용량 80㎥/h"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235383.69 545831.91)" ;
+    geo:asWKT "POINT(234472.45 545739.71)" ;
     rdfs:comment "협잡물종합처리기→드럼스크린 (표준순서 추정)"@ko .
 
 axa:M_103 a ax:Asset ;
@@ -90,7 +90,7 @@ axa:M_104 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "무주축 스크류 컨베이어(경사형), Ø250mm×L7.0m"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235375.93 545835.63)" .
+    geo:asWKT "POINT(234465.15 545735.16)" .
 
 axa:M_105 a ax:Asset ;
     rdfs:label "협잡물및침사물 이송컨베이어(2)"@ko ;
@@ -104,7 +104,7 @@ axa:M_105 a ax:Asset ;
     ax:readConfidence "med" ;
     ax:spec "공기압식 이송 컨베이어, 500L/h×80A×L22m"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235373.28 545835.63)" .
+    geo:asWKT "POINT(234463.73 545732.92)" .
 
 axa:M_106 a ax:Asset ;
     rdfs:label "유량조정조 펌프"@ko ;
@@ -120,7 +120,7 @@ axa:M_106 a ax:Asset ;
         "med" ;
     ax:spec "수중모터펌프(자동탈착식) VVVF, 1.0㎥/min×11mH"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235371.37 545829.38)" ;
+    geo:asWKT "POINT(234467.98 545727.96)" ;
     rdfs:comment "유량조정조펌프→처리계통도(2). 계통간 참조 확인"@ko,
         "인버터, 모니터링유닛 포함"@ko .
 
@@ -136,7 +136,7 @@ axa:M_107 a ax:Asset ;
     ax:readConfidence "med" ;
     ax:spec "수중횡형 프로펠러형(자동탈착식)"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235380.94 545826.81)" ;
+    geo:asWKT "POINT(234475.28 545734.65)" ;
     rdfs:comment "모니터링유닛 포함"@ko .
 
 axa:M_108 a ax:Asset ;
@@ -150,7 +150,7 @@ axa:M_108 a ax:Asset ;
     ax:readConfidence "med" ;
     ax:spec "수동식 수문(HDPE), W0.4m×H0.4m"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235368.61 545827.32)" .
+    geo:asWKT "POINT(234468.23 545724.52)" .
 
 axa:M_109 a ax:Asset ;
     rdfs:label "장비 반출입 호이스트"@ko ;
@@ -164,7 +164,7 @@ axa:M_109 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "전동식 모노레일 호이스트, 2Ton×L350×H16m"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235364.22 545829.45)" .
+    geo:asWKT "POINT(234464.08 545721.96)" .
 
 axa:M_112 a ax:Asset ;
     rdfs:label "협잡물 이송 컨베이어(2)"@ko ;
@@ -179,7 +179,7 @@ axa:M_112 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "무주축 스크류 컨베이어(경사형), Ø250mm×L5.0m"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235362.70 545836.16)" .
+    geo:asWKT "POINT(234457.60 545724.28)" .
 
 axa:M_113 a ax:Asset ;
     rdfs:label "협잡물 이송 컨베이어(3)"@ko ;
@@ -194,7 +194,7 @@ axa:M_113 a ax:Asset ;
     ax:readConfidence "med" ;
     ax:spec "공기압식 이송 컨베이어, 500L/h×80A×L17m"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235361.42 545836.17)" ;
+    geo:asWKT "POINT(234456.91 545723.20)" ;
     rdfs:comment "MOP"@ko .
 
 axa:M_115 a ax:Asset ;
@@ -209,7 +209,7 @@ axa:M_115 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "전동식 모노레일 호이스트"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235373.77 545826.41)" .
+    geo:asWKT "POINT(234471.77 545728.39)" .
 
 axa:M_201 a ax:Asset ;
     rdfs:label "혐기조 액이송교반장치"@ko ;
@@ -224,7 +224,7 @@ axa:M_201 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "수중횡형 프로펠러형 VVVF, 140㎥/hr×1,200rpm"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235357.65 545824.15)" ;
+    geo:asWKT "POINT(234465.02 545713.57)" ;
     rdfs:comment "모니터링유닛 포함"@ko .
 
 axa:M_202 a ax:Asset ;
@@ -238,7 +238,7 @@ axa:M_202 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "수동 게이트 밸브, 이상식, 250A×10K(1MPa)"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235384.09 545821.16)" .
+    geo:asWKT "POINT(234481.74 545734.28)" .
 
 axa:M_203 a ax:Asset ;
     rdfs:label "공유조 액이송교반장치"@ko ;
@@ -253,7 +253,7 @@ axa:M_203 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "수중횡형 프로펠러형 VVVF, 240㎥/hr×1,200rpm"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235378.55 545819.76)" ;
+    geo:asWKT "POINT(234479.95 545728.85)" ;
     rdfs:comment "모니터링유닛 포함"@ko .
 
 axa:M_204 a ax:Asset ;
@@ -268,7 +268,7 @@ axa:M_204 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "수중횡형 프로펠러형 VVVF, 192㎥/hr×1,200rpm"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235382.83 545811.15)" ;
+    geo:asWKT "POINT(234489.51 545727.84)" ;
     rdfs:comment "모니터링유닛 포함"@ko .
 
 axa:M_205 a ax:Asset ;
@@ -283,7 +283,7 @@ axa:M_205 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "단단 터보송풍기, 공기베어링식 VVVF, 7㎥/min×5,500mmAq(53.94kPa)"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235373.12 545808.86)" ;
+    geo:asWKT "POINT(234486.23 545718.42)" ;
     rdfs:comment "DO 슬라이스(공유조 호기)의 송풍 공급원. M-007에도 등장."@ko,
         "← DO 슬라이스 송풍계통 원천"@ko,
         "공유조 송풍기 — 계통도 DXF에서 확인. DO 슬라이스 송풍원"@ko ;
@@ -301,7 +301,7 @@ axa:M_206 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "멤브레인 디스크형 Ø520mm, 250L/min"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235382.65 545815.55)" .
+    geo:asWKT "POINT(234485.70 545730.05)" .
 
 axa:M_207 a ax:Asset ;
     rdfs:label "막분리조 송풍기"@ko ;
@@ -316,7 +316,7 @@ axa:M_207 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "단단 터보송풍기, 공기베어링식 VVVF, 36㎥/min×5,500mmAq(53.94kPa)"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235371.21 545812.53)" .
+    geo:asWKT "POINT(234482.11 545718.78)" .
 
 axa:M_208 a ax:Asset ;
     rdfs:label "분리막"@ko ;
@@ -329,7 +329,7 @@ axa:M_208 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "2단 PTFE 평막, 2,400㎥/일"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235365.59 545822.53)" .
+    geo:asWKT "POINT(234470.65 545719.40)" .
 
 axa:M_209 a ax:Asset ;
     rdfs:label "공법 제어반"@ko ;
@@ -355,7 +355,7 @@ axa:M_210 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "자흡식 횡축 편흡입 원심펌프 VVVF, 1.4㎥/min×13mH"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235375.01 545804.41)" ;
+    geo:asWKT "POINT(234491.00 545717.63)" ;
     rdfs:comment "인버터 전기공급분"@ko .
 
 axa:M_211 a ax:Asset ;
@@ -371,7 +371,7 @@ axa:M_211 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "횡축 스프르트 펌프, 0.5㎥/min×8mH"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235370.27 545822.30)" ;
+    geo:asWKT "POINT(234473.36 545723.23)" ;
     rdfs:comment "모니터링유닛 포함"@ko .
 
 axa:M_212 a ax:Asset ;
@@ -406,7 +406,7 @@ axa:M_214 a ax:Asset ;
         "med" ;
     ax:spec "PE 원통형 탱크, 교반기 포함, 200L"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235383.95 545817.66)" ;
+    geo:asWKT "POINT(234484.62 545732.28)" ;
     rdfs:comment "NaOCl원액저장→원액이송펌프"@ko .
 
 axa:M_217 a ax:Asset ;
@@ -423,7 +423,7 @@ axa:M_217 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "PE 원통형 탱크, 교반기 포함, 1,000L"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235383.81 545813.42)" ;
+    geo:asWKT "POINT(234488.12 545729.89)" ;
     rdfs:comment "NaOH저장탱크→주입펌프"@ko .
 
 axa:M_219 a ax:Asset ;
@@ -438,7 +438,7 @@ axa:M_219 a ax:Asset ;
     ax:readConfidence "med" ;
     ax:spec "수중 볼텍스 펌프, 0.16㎥/min×10mH"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235372.56 545824.63)" ;
+    geo:asWKT "POINT(234472.62 545726.41)" ;
     rdfs:comment "MOP"@ko .
 
 axa:M_220 a ax:Asset ;
@@ -454,7 +454,7 @@ axa:M_220 a ax:Asset ;
     ax:readConfidence "med" ;
     ax:spec "횡축 볼텍스 펌프, 0.2㎥/min×8mH"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235369.91 545817.35)" .
+    geo:asWKT "POINT(234477.34 545720.27)" .
 
 axa:M_221 a ax:Asset ;
     rdfs:label "유지관리용 호이스트"@ko ;
@@ -468,7 +468,7 @@ axa:M_221 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "전동식 모노레일 호이스트, W100×L4m×H10m"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235370.50 545816.72)" ;
+    geo:asWKT "POINT(234478.19 545720.43)" ;
     rdfs:comment "공법 기자재"@ko .
 
 axa:M_222 a ax:Asset ;
@@ -483,7 +483,7 @@ axa:M_222 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "전동식 모노레일 호이스트, W100×L18m×H6m"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235371.07 545808.86)" ;
+    geo:asWKT "POINT(234485.13 545716.69)" ;
     rdfs:comment "공법 기자재"@ko .
 
 axa:M_223 a ax:Asset ;
@@ -498,7 +498,7 @@ axa:M_223 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "전동식 모노레일 호이스트, W100×L33m×H10m"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235369.31 545820.11)" ;
+    geo:asWKT "POINT(234474.69 545721.24)" ;
     rdfs:comment "공법 기자재"@ko .
 
 axa:M_301 a ax:Asset ;
@@ -515,7 +515,7 @@ axa:M_301 a ax:Asset ;
         "med" ;
     ax:spec "수중모터펌프(자동탈착식), 1.0㎥/min×21mH"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235378.05 545804.31)" ;
+    geo:asWKT "POINT(234492.71 545720.14)" ;
     rdfs:comment "모니터링유닛 포함"@ko,
         "처리수펌프→총인처리시설(IPR)"@ko .
 
@@ -611,7 +611,7 @@ axa:M_303 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "전동식 모노레일 호이스트, W100×L4m×H11m"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235383.68 545806.35)" ;
+    geo:asWKT "POINT(234494.01 545725.98)" ;
     rdfs:comment "MOP"@ko .
 
 axa:M_401 a ax:Asset ;
@@ -627,7 +627,7 @@ axa:M_401 a ax:Asset ;
         "med" ;
     ax:spec "부스터 펌프(격막식) VVVF, 0.3㎥/H×40mH×3(1)대"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235371.51 545803.85)" ;
+    geo:asWKT "POINT(234489.59 545714.37)" ;
     rdfs:comment "MOP"@ko,
         "용수공급장치→장내 용수(공기공급/세정). M-008에 등장"@ko .
 
@@ -646,7 +646,7 @@ axa:M_502 a ax:Asset ;
         "med" ;
     ax:spec "일축나사식 용적형펌프 VVVF, 2.0㎥/h×2kg/㎠(0.2MPa)"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235369.20 545803.59)" ;
+    geo:asWKT "POINT(234488.57 545712.28)" ;
     rdfs:comment "슬러지공급펌프→탈수기"@ko .
 
 axa:M_506 a ax:Asset ;
@@ -666,7 +666,7 @@ axa:M_506 a ax:Asset ;
         "med" ;
     ax:spec "루츠형 브로와, 방진가대 포함, 2.0㎥/min×5,300mmAq(51.98kPa)"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235360.05 545804.41)" ;
+    geo:asWKT "POINT(234482.97 545705.00)" ;
     rdfs:comment "슬러지저류조 송풍기→산기장치"@ko .
 
 axa:M_507 a ax:Asset ;
@@ -682,7 +682,7 @@ axa:M_507 a ax:Asset ;
         "med" ;
     ax:spec "연속식 액상 용해장치, 0.32㎥/hr 이상"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235375.01 545820.03)" ;
+    geo:asWKT "POINT(234477.82 545726.01)" ;
     rdfs:comment "폴리머 자동용해장치→폴리머 공급펌프"@ko .
 
 axa:M_601 a ax:Asset ;
@@ -701,7 +701,7 @@ axa:M_601 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "복합 탈취기, 부속설비 포함, 130㎥/분"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235362.04 545808.33)" ;
+    geo:asWKT "POINT(234480.73 545708.79)" ;
     rdfs:comment "기기목록 '바.탈취설비' 확정. M-011 계통도 일치"@ko,
         "탈취기 — M-011 DXF 확인, 태그체계 M-601 재확정"@ko,
         "탈취기(복합)→탈취팬→배기. 악취원=콘테이너실 등"@ko .
@@ -4086,7 +4086,7 @@ axf:GuksuPlant a ax:Facility ;
     rdfs:label "국수 공공하수처리시설"@ko ;
     ax:coordSource "C-002" ;
     ax:documentedBy axg:C_002 ;
-    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POLYGON((235323.8 545797.4, 235427.4 545797.4, 235427.4 545851.4, 235323.8 545851.4, 235323.8 545797.4))"^^geo:wktLiteral .
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POLYGON((234469.43 545670.65, 234525.03 545758.07, 234479.47 545787.05, 234423.86 545699.64, 234469.43 545670.65))" .
 
 axp:DGS_B_001 a ax:PipeStation ;
     rdfs:label "DGS-B-001" ;
@@ -4219,13 +4219,13 @@ axp:MH_025 a ax:Manhole ;
 axp:PS_Dogok a ax:Facility ;
     rdfs:label "도곡중계펌프장"@ko ;
     ax:coordSource "관로DXF" ;
-    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(233724.9 546202.7)"^^geo:wktLiteral ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(233269.33 544539.06)" ;
     rdfs:comment "상세도면 MP-006/007. 위치점은 관로원본에서 확정."@ko .
 
 axp:PS_Gooksu a ax:Facility ;
     rdfs:label "국수중계펌프장"@ko ;
     ax:coordSource "관로DXF" ;
-    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(235285.4 546072.8)"^^geo:wktLiteral ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234216.44 545786.06)" ;
     rdfs:comment "상세도면 MP-008/009. 위치점은 관로원본에서 확정."@ko .
 
 ax:coordStatus a rdfs:Datatype .
@@ -4279,7 +4279,7 @@ axa:M_110 a ax:Asset ;
         "med" ;
     ax:spec "드럼형 메쉬 스크린, 목간격1, 용량60㎥/h"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235363.36 545831.10)" ;
+    geo:asWKT "POINT(234462.22 545722.12)" ;
     rdfs:comment "드럼스크린→협잡물이송컨베이어"@ko .
 
 axa:M_111 a ax:Asset ;
@@ -4295,7 +4295,7 @@ axa:M_111 a ax:Asset ;
     ax:readConfidence "med" ;
     ax:spec "무주축 스크류 컨베이어(경사형), Ø250mm×L5.5m"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235363.88 545836.16)" ;
+    geo:asWKT "POINT(234458.23 545725.27)" ;
     rdfs:comment "이송→저장콘테이너"@ko .
 
 axa:M_114 a ax:Asset ;
@@ -4309,7 +4309,7 @@ axa:M_114 a ax:Asset ;
     ax:readConfidence "med" ;
     ax:spec "스테인레스 강판제(이동식), 3㎥"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235360.23 545822.09)" .
+    geo:asWKT "POINT(234468.15 545714.64)" .
 
 axa:M_215 a ax:Asset ;
     rdfs:label "NaOCl 원액이송펌프"@ko ;
@@ -4324,7 +4324,7 @@ axa:M_215 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "무맥동형 다이아프램식 정량펌프 VVVF, 210mL/min×10kg/㎠(0.98MPa)"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235378.09 545816.74)" ;
+    geo:asWKT "POINT(234482.25 545726.84)" ;
     rdfs:comment "원액이송→희석탱크"@ko .
 
 axa:M_216 a ax:Asset ;
@@ -4340,7 +4340,7 @@ axa:M_216 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "PE 원통형 탱크, 교반기 포함, 1,000L"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235376.17 545825.50)" .
+    geo:asWKT "POINT(234473.83 545729.92)" .
 
 axa:M_218 a ax:Asset ;
     rdfs:label "NaOH 주입펌프"@ko ;
@@ -4357,7 +4357,7 @@ axa:M_218 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "무맥동형 다이아프램식 정량펌프 VVVF, 50mL/min×10kg/㎠(0.98MPa)"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235378.98 545814.69)" ;
+    geo:asWKT "POINT(234484.45 545726.49)" ;
     rdfs:comment "NaOH 주입 → 처리계통도(2). 배관 20A-NaOH-PE 확인"@ko .
 
 axa:M_302 a ax:Asset ;
@@ -4372,7 +4372,7 @@ axa:M_302 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "총인처리시설(IPR), 2,400㎥/일"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235374.72 545823.46)" ;
+    geo:asWKT "POINT(234474.77 545727.61)" ;
     rdfs:comment "공법 기자재. 패키지"@ko .
 
 axa:M_302_3 a ax:Asset ;
@@ -4401,7 +4401,7 @@ axa:M_503 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "무주축 스크류 컨베이어(경사형), Ø250mm×L8.5m"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235364.58 545820.16)" ;
+    geo:asWKT "POINT(234472.11 545717.28)" ;
     rdfs:comment "사용자 정정"@ko,
         "케익이송→케익저장콘테이너"@ko .
 
@@ -4417,7 +4417,7 @@ axa:M_504 a ax:Asset ;
     ax:readConfidence "med" ;
     ax:spec "암롤박스, 8㎥"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235359.28 545818.13)" .
+    geo:asWKT "POINT(234470.98 545711.72)" .
 
 axa:M_505 a ax:Asset ;
     rdfs:label "슬러지저류조 산기장치"@ko ;
@@ -4430,7 +4430,7 @@ axa:M_505 a ax:Asset ;
     ax:readConfidence "med" ;
     ax:spec "고정식, 파이프형 산기장치, 65A, 40A"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235363.98 545803.71)" .
+    geo:asWKT "POINT(234485.67 545707.94)" .
 
 axa:M_508 a ax:Asset ;
     rdfs:label "폴리머 공급펌프"@ko ;
@@ -4446,7 +4446,7 @@ axa:M_508 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "무맥동형 다이아프램식 정량펌프 VVVF, 3.4L/min×5kg/㎠(0.49MPa)"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235371.33 545820.85)" ;
+    geo:asWKT "POINT(234475.15 545723.34)" ;
     rdfs:comment "사용자 정정"@ko,
         "폴리머 주입 → 탈수기(응집)"@ko .
 
@@ -4463,7 +4463,7 @@ axa:M_601_1 a ax:Asset ;
     ax:readConfidence "high" ;
     ax:spec "터보팬, 130㎥/분×350mmAq"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235364.68 545816.78)" ;
+    geo:asWKT "POINT(234475.02 545715.55)" ;
     rdfs:comment "기기목록 확정. M-011 계통도 일치"@ko .
 
 axg:C_002 a ax:Drawing ;
@@ -4504,7 +4504,7 @@ axa:M_501 a ax:Asset ;
         "med" ;
     ax:spec "원심 탈수기, 2.0㎥/h"@ko ;
     ax:tagStatus "verified" ;
-    geo:asWKT "POINT(235366.70 545819.29)" ;
+    geo:asWKT "POINT(234473.98 545718.60)" ;
     rdfs:comment "탈수기→케익이송컨베이어"@ko .
 
 axs:SYS_UTILITY a ax:Process ;

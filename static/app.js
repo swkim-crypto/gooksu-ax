@@ -55,6 +55,8 @@ async function init() {
 /* ---------- Leaflet (키 없이 즉시 동작) ---------- */
 function initLeaflet() {
   map = L.map("map").setView([cfg.site_center.lat, cfg.site_center.lng], 15);
+  map.on("click", e => L.popup().setLatLng(e.latlng)
+    .setContent(`${e.latlng.lat.toFixed(6)}, ${e.latlng.lng.toFixed(6)}`).openOn(map));
   const base = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",
     { attribution: "&copy; OpenStreetMap", maxZoom: 19 }).addTo(map);
   const sat = L.tileLayer(
@@ -76,7 +78,9 @@ function initKakao(key) {
       map.addControl(new kakao.maps.MapTypeControl(), kakao.maps.ControlPosition.TOPRIGHT); // 지도|스카이뷰
       map.addControl(new kakao.maps.ZoomControl(), kakao.maps.ControlPosition.RIGHT);
       kakaoInfo = new kakao.maps.CustomOverlay({ yAnchor: 1.4, zIndex: 30 });
-      kakao.maps.event.addListener(map, "click", () => kakaoInfo.setMap(null));
+      kakao.maps.event.addListener(map, "click", (e) => {
+        showKakaoInfo(e.latLng, `${e.latLng.getLat().toFixed(6)}, ${e.latLng.getLng().toFixed(6)}`);
+      });
       kakaoMode = true; res();
     });
     document.head.appendChild(s);
