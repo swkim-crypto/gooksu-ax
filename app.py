@@ -26,7 +26,7 @@ LAYERS = [
      "file": "pumpstations.geojson", "default": True},
     {"id": "facility", "name": "처리시설", "type": "mixed",
      "file": "facility.geojson", "default": True},
-    {"id": "equipment", "name": "장비(52종)", "type": "point",
+    {"id": "equipment", "name": "장비(48종)", "type": "point",
      "file": "equipment.geojson", "default": True},
 ]
 

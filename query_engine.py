@@ -13,6 +13,7 @@ import os
 import re
 import json
 from rdflib import Graph, Namespace
+from pyproj import Transformer
 
 AX = "http://samaneng.com/ax/onto#"
 PREFIXES = """PREFIX ax: <http://samaneng.com/ax/onto#>
@@ -40,6 +41,34 @@ class GuksuEngine:
             ?a a ax:Asset ; rdfs:label ?l . OPTIONAL { ?a ax:hasTag ?t } }"""
         for r in self.g.query(q):
             self.assets[str(r.a)] = {"label": str(r.l), "tag": str(r.t) if r.t else ""}
+        # WKT(EPSG:5186) → WGS84 캐시
+        self._tf = Transformer.from_crs("EPSG:5186", "EPSG:4326", always_xy=True)
+        self.coords = {}
+        for r in self.g.query(PREFIXES + "SELECT ?s ?w WHERE { ?s geo:asWKT ?w }"):
+            m = re.match(r"POINT\(([-\d.]+) ([-\d.]+)\)", str(r.w))
+            if m:
+                lon, lat = self._tf.transform(float(m.group(1)), float(m.group(2)))
+                self.coords[str(r.s)] = [round(lon, 7), round(lat, 7)]
+
+    def _edge_features(self, pairs):
+        """[(uriA, labelA, uriB, labelB, edgeLabel)] → 지도 하이라이트 피처"""
+        feats = []
+        for ua, la, ub, lb, el in pairs:
+            ca, cb = self.coords.get(ua), self.coords.get(ub)
+            if ca:
+                feats.append({"kind": "point", "coord": ca, "label": la})
+            if cb:
+                feats.append({"kind": "point", "coord": cb, "label": lb})
+            if ca and cb:
+                feats.append({"kind": "edge", "from": ca, "to": cb,
+                              "label": el or f"{la}→{lb}"})
+        # 중복 point 제거
+        seen, out = set(), []
+        for f in feats:
+            k = (f["kind"], tuple(f.get("coord") or ()), f.get("label"), tuple(f.get("from") or ()))
+            if k in seen: continue
+            seen.add(k); out.append(f)
+        return out
 
     # ---------- 공용 ----------
     def _run(self, sparql):
@@ -101,12 +130,14 @@ class GuksuEngine:
         ans = f"{a['label']}({r.get('tag') or a['tag']})은(는) **{r['sysLabel']}** 계통 소속입니다."
         if r.get("spec"):
             ans += f"\n사양: {r['spec']}"
-        return ans, rows, sp
+        feats = ([{"kind": "point", "coord": self.coords[uri], "label": a["label"]}]
+                 if uri in self.coords else [])
+        return ans, rows, sp, feats
 
     def q_flow_chain(self, text):
         sid = self._find_system(text)
         filt = f"?a ax:partOf <http://samaneng.com/ax/data/guksu/system/{sid}> ." if sid else ""
-        sp = f"""SELECT ?al ?bl ?m ?conf WHERE {{
+        sp = f"""SELECT ?a ?b ?al ?bl ?m ?conf WHERE {{
             ?a ax:feeds ?b . ?a rdfs:label ?al . ?b rdfs:label ?bl .
             {filt}
             OPTIONAL {{ ?a ax:conveys ?m }} OPTIONAL {{ ?a ax:readConfidence ?conf }} }}"""
@@ -129,14 +160,20 @@ class GuksuEngine:
                 s += f" ({r['conf']})"
             lines.append(s)
         scope = dict((k, v[0]) for k, v in SYSTEMS.items()).get(sid, "전체")
-        return f"{scope} 흐름 관계 {len(rows)}건:\n" + "\n".join(lines), rows, sp
+        feats = self._edge_features([(r["a"], r["al"], r["b"], r["bl"], r.get("m")) for r in rows])
+        return f"{scope} 흐름 관계 {len(rows)}건:\n" + "\n".join(lines), rows, sp, feats
 
     def q_chemical(self, _):
-        sp = """SELECT ?al ?bl ?m WHERE {
+        sp = """SELECT ?a ?b ?al ?bl ?m WHERE {
             ?a ax:feeds ?b ; ax:conveys ?m . ?a rdfs:label ?al . ?b rdfs:label ?bl }"""
         rows = self._run(sp)
         lines = [f"- {r['m']}: {r['al']} → {r['bl']}" for r in rows]
-        return f"약품/매체 주입 경로 {len(rows)}건:\n" + "\n".join(lines), rows, sp
+        feats = self._edge_features([(r["a"], r["al"], r["b"], r["bl"], r["m"]) for r in rows])
+        located = sum(1 for f in feats if f["kind"] == "edge")
+        ans = f"약품/매체 주입 경로 {len(rows)}건:\n" + "\n".join(lines)
+        if located:
+            ans += f"\n\n(지도에 좌표 확보된 {located}개 경로를 표시했습니다)"
+        return ans, rows, sp, feats
 
     def q_drawing(self, text):
         m = re.search(r"\b([A-Z]{1,2}P?-\d{3})\b", text)
@@ -190,7 +227,9 @@ class GuksuEngine:
             parts.append(f"계통: {r['sysLabel']}")
         if r.get("status"):
             parts.append(f"검증상태: {r['status']}")
-        return "\n".join(parts), rows, sp
+        feats = ([{"kind": "point", "coord": self.coords[uri], "label": a["label"]}]
+                 if uri in self.coords else [])
+        return "\n".join(parts), rows, sp, feats
 
     def q_keyword(self, text):
         toks = [t for t in re.split(r"[\s?？.,]+", text) if len(t) >= 2][:5]
@@ -217,17 +256,23 @@ class GuksuEngine:
     ]
 
     def answer(self, question):
+        def pack(out, route):
+            if len(out) == 4:
+                ans, rows, sp, feats = out
+            else:
+                ans, rows, sp = out; feats = []
+            d = {"answer": ans, "rows": rows, "sparql": sp, "route": route}
+            if feats: d["map"] = {"features": feats}
+            return d
         for pat, fn in self.TEMPLATES:
             if re.search(pat, question):
                 out = getattr(self, fn)(question)
                 if out:
-                    ans, rows, sp = out
-                    return {"answer": ans, "rows": rows, "sparql": sp, "route": fn}
+                    return pack(out, fn)
         # 키워드 폴백
         out = self.q_keyword(question)
         if out:
-            ans, rows, sp = out
-            return {"answer": ans, "rows": rows, "sparql": sp, "route": "keyword"}
+            return pack(out, "keyword")
         # LLM 폴백
         llm = self.llm_fallback(question)
         if llm:
