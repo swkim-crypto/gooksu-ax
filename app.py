@@ -42,7 +42,7 @@ def config():
         "kakao_js_key": os.environ.get("KAKAO_JS_KEY") or None,
         "llm_enabled": bool(os.environ.get("ANTHROPIC_API_KEY")),
         "triples": len(engine.g),
-        "site_center": {"lat": 37.5103, "lng": 127.3899},  # 국수 처리장
+        "site_center": {"lat": 37.5108, "lng": 127.3921},  # 국수 처리장
     })
 
 
