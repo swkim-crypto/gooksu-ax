@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>국수 하수처리 GIS+AI</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div id="app">
+  <aside id="panel-layers">
+    <h1>국수 하수처리<br><span>설계정보 GIS+AI</span></h1>
+    <h2>레이어</h2>
+    <div id="layer-list"></div>
+    <div id="map-status"></div>
+  </aside>
+
+  <main id="panel-map">
+    <div id="map"></div>
+  </main>
+
+  <aside id="panel-ai">
+    <h2>AI 질의</h2>
+    <div id="chat-log">
+      <div class="msg bot">국수 공공하수처리시설 설계 그래프(merged_guksu.ttl)에 질의할 수 있습니다.<br><br>
+      예시: <em>계통별 장비 수 / 슬러지탈수 흐름 / 약품 주입 경로 / 공기압축기는 어느 계통? / M-009 도면은 무엇을 문서화해?</em></div>
+    </div>
+    <form id="chat-form">
+      <input id="chat-input" type="text" placeholder="질문을 입력하세요" autocomplete="off">
+      <button type="submit">질의</button>
+    </form>
+  </aside>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

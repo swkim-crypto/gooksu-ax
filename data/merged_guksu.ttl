@@ -1,0 +1,4541 @@
+@prefix ax: <http://samaneng.com/ax/onto#> .
+@prefix axa: <http://samaneng.com/ax/data/guksu/asset/> .
+@prefix axf: <http://samaneng.com/ax/data/guksu/facility/> .
+@prefix axg: <http://samaneng.com/ax/data/guksu/drawing/> .
+@prefix axp: <http://samaneng.com/ax/data/guksu/pipe/> .
+@prefix axs: <http://samaneng.com/ax/data/guksu/system/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ax:Drawing a rdfs:Class ;
+    rdfs:label "도면"@ko .
+
+ax:Manhole a rdfs:Class ;
+    rdfs:label "맨홀"@ko ;
+    rdfs:subClassOf ax:Facility .
+
+ax:PipeStation a rdfs:Class ;
+    rdfs:label "관로측점"@ko .
+
+axa:M_023 ax:coordSource "DXF:M-012" ;
+    ax:coordStatus "excluded-drawing-ref" ;
+    ax:localXY "359147.1,-52999.0" .
+
+axa:M_024 ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "excluded-drawing-ref" ;
+    ax:localXY "426188.6,-59978.6" .
+
+axa:M_025 ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "excluded-drawing-ref" ;
+    ax:localXY "426488.2,-79663.3" .
+
+axa:M_026 ax:coordSource "DXF:M-014" ;
+    ax:coordStatus "excluded-drawing-ref" ;
+    ax:localXY "526764.1,-63670.8" .
+
+axa:M_101 a ax:Asset ;
+    rdfs:label "협잡물종합처리기 제어밸브"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-101 A~B" ;
+    ax:localXY "423073.3,-54760.0" ;
+    ax:partOf axs:SYS_PRETREAT ;
+    ax:powerKW "0.2" ;
+    ax:readConfidence "high" ;
+    ax:spec "전동 게이트 밸브, 250A×10K(1MPa)"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235381.22 545836.72)" ;
+    rdfs:comment "MOP 부착형"@ko .
+
+axa:M_102 a ax:Asset ;
+    rdfs:label "협잡물종합처리기"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axa:M_110 ;
+    ax:hasTag "M-102 A,B" ;
+    ax:localXY "427879.8,-52293.8" ;
+    ax:partOf axs:SYS_PRETREAT ;
+    ax:powerKW "3.45" ;
+    ax:quantity "2식" ;
+    ax:readConfidence "high",
+        "med" ;
+    ax:spec "침사및협잡물종합처리기, 세목100, 용량 80㎥/h"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235383.69 545831.91)" ;
+    rdfs:comment "협잡물종합처리기→드럼스크린 (표준순서 추정)"@ko .
+
+axa:M_103 a ax:Asset ;
+    rdfs:label "이동용 배수펌프"@ko ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-103" ;
+    ax:partOf axs:SYS_PRETREAT ;
+    ax:powerKW "3.7" ;
+    ax:readConfidence "med" ;
+    ax:spec "용적식 쌍원통, 이동식, 0.5㎥/min×10mH"@ko ;
+    ax:tagStatus "verified" ;
+    rdfs:comment "창고 보관용"@ko .
+
+axa:M_104 a ax:Asset ;
+    rdfs:label "협잡물및침사물 이송컨베이어(1)"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-104" ;
+    ax:localXY "424157.4,-60045.9" ;
+    ax:partOf axs:SYS_PRETREAT ;
+    ax:powerKW "2.2" ;
+    ax:readConfidence "high" ;
+    ax:spec "무주축 스크류 컨베이어(경사형), Ø250mm×L7.0m"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235375.93 545835.63)" .
+
+axa:M_105 a ax:Asset ;
+    rdfs:label "협잡물및침사물 이송컨베이어(2)"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-105" ;
+    ax:localXY "424157.4,-62695.8" ;
+    ax:partOf axs:SYS_PRETREAT ;
+    ax:powerKW "7.5" ;
+    ax:readConfidence "med" ;
+    ax:spec "공기압식 이송 컨베이어, 500L/h×80A×L22m"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235373.28 545835.63)" .
+
+axa:M_106 a ax:Asset ;
+    rdfs:label "유량조정조 펌프"@ko ;
+    ax:coordSource "DXF:M-014" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axg:M_007 ;
+    ax:hasTag "M-106 A~C" ;
+    ax:localXY "515013.3,-64608.1" ;
+    ax:partOf axs:SYS_PRETREAT ;
+    ax:quantity "3" ;
+    ax:readConfidence "high",
+        "med" ;
+    ax:spec "수중모터펌프(자동탈착식) VVVF, 1.0㎥/min×11mH"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235371.37 545829.38)" ;
+    rdfs:comment "유량조정조펌프→처리계통도(2). 계통간 참조 확인"@ko,
+        "인버터, 모니터링유닛 포함"@ko .
+
+axa:M_107 a ax:Asset ;
+    rdfs:label "유량조정조 교반기"@ko ;
+    ax:coordSource "DXF:M-014" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-107 A~D" ;
+    ax:localXY "517575.6,-55037.7" ;
+    ax:partOf axs:SYS_PRETREAT ;
+    ax:quantity "4" ;
+    ax:readConfidence "med" ;
+    ax:spec "수중횡형 프로펠러형(자동탈착식)"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235380.94 545826.81)" ;
+    rdfs:comment "모니터링유닛 포함"@ko .
+
+axa:M_108 a ax:Asset ;
+    rdfs:label "유량조정조 유입수문"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-108 A,B" ;
+    ax:localXY "432466.8,-67374.9" ;
+    ax:partOf axs:SYS_PRETREAT ;
+    ax:readConfidence "med" ;
+    ax:spec "수동식 수문(HDPE), W0.4m×H0.4m"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235368.61 545827.32)" .
+
+axa:M_109 a ax:Asset ;
+    rdfs:label "장비 반출입 호이스트"@ko ;
+    ax:coordSource "DXF:M-012" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-109" ;
+    ax:localXY "346244.3,-71762.0" ;
+    ax:partOf axs:SYS_PRETREAT ;
+    ax:quantity "1" ;
+    ax:readConfidence "high" ;
+    ax:spec "전동식 모노레일 호이스트, 2Ton×L350×H16m"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235364.22 545829.45)" .
+
+axa:M_112 a ax:Asset ;
+    rdfs:label "협잡물 이송 컨베이어(2)"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-112" ;
+    ax:localXY "423631.5,-73278.0" ;
+    ax:partOf axs:SYS_PRETREAT ;
+    ax:powerKW "2.2" ;
+    ax:quantity "1" ;
+    ax:readConfidence "high" ;
+    ax:spec "무주축 스크류 컨베이어(경사형), Ø250mm×L5.0m"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235362.70 545836.16)" .
+
+axa:M_113 a ax:Asset ;
+    rdfs:label "협잡물 이송 컨베이어(3)"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-113" ;
+    ax:localXY "423620.3,-74555.3" ;
+    ax:partOf axs:SYS_PRETREAT ;
+    ax:powerKW "7.5" ;
+    ax:quantity "1" ;
+    ax:readConfidence "med" ;
+    ax:spec "공기압식 이송 컨베이어, 500L/h×80A×L17m"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235361.42 545836.17)" ;
+    rdfs:comment "MOP"@ko .
+
+axa:M_115 a ax:Asset ;
+    rdfs:label "유지관리용 호이스트"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-115" ;
+    ax:localXY "433382.5,-62207.3" ;
+    ax:partOf axs:SYS_PRETREAT ;
+    ax:quantity "1" ;
+    ax:readConfidence "high" ;
+    ax:spec "전동식 모노레일 호이스트"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235373.77 545826.41)" .
+
+axa:M_201 a ax:Asset ;
+    rdfs:label "혐기조 액이송교반장치"@ko ;
+    ax:coordSource "DXF:M-014" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-201 A,B" ;
+    ax:localXY "520235.4,-78327.8" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:powerKW "3.7" ;
+    ax:quantity "2" ;
+    ax:readConfidence "high" ;
+    ax:spec "수중횡형 프로펠러형 VVVF, 140㎥/hr×1,200rpm"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235357.65 545824.15)" ;
+    rdfs:comment "모니터링유닛 포함"@ko .
+
+axa:M_202 a ax:Asset ;
+    rdfs:label "혐기조 액이송제어밸브"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-202 A,B" ;
+    ax:localXY "438625.5,-51894.2" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:readConfidence "high" ;
+    ax:spec "수동 게이트 밸브, 이상식, 250A×10K(1MPa)"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235384.09 545821.16)" .
+
+axa:M_203 a ax:Asset ;
+    rdfs:label "공유조 액이송교반장치"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-203 A,B" ;
+    ax:localXY "440030.6,-57429.6" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:powerKW "7.5" ;
+    ax:quantity "2" ;
+    ax:readConfidence "high" ;
+    ax:spec "수중횡형 프로펠러형 VVVF, 240㎥/hr×1,200rpm"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235378.55 545819.76)" ;
+    rdfs:comment "모니터링유닛 포함"@ko .
+
+axa:M_204 a ax:Asset ;
+    rdfs:label "막분리조 다목적교반장치"@ko ;
+    ax:coordSource "DXF:M-014" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-204 A~D" ;
+    ax:localXY "533238.8,-53154.8" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:quantity "4" ;
+    ax:readConfidence "high" ;
+    ax:spec "수중횡형 프로펠러형 VVVF, 192㎥/hr×1,200rpm"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235382.83 545811.15)" ;
+    rdfs:comment "모니터링유닛 포함"@ko .
+
+axa:M_205 a ax:Asset ;
+    rdfs:label "공유조 송풍기"@ko ;
+    ax:coordSource "DXF:M-012" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-205 A~C" ;
+    ax:localXY "366833.6,-62855.2" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:quantity "1" ;
+    ax:readConfidence "high" ;
+    ax:spec "단단 터보송풍기, 공기베어링식 VVVF, 7㎥/min×5,500mmAq(53.94kPa)"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235373.12 545808.86)" ;
+    rdfs:comment "DO 슬라이스(공유조 호기)의 송풍 공급원. M-007에도 등장."@ko,
+        "← DO 슬라이스 송풍계통 원천"@ko,
+        "공유조 송풍기 — 계통도 DXF에서 확인. DO 슬라이스 송풍원"@ko ;
+    rdfs:seeAlso axg:M_007 .
+
+axa:M_206 a ax:Asset ;
+    rdfs:label "공유조 산기장치"@ko ;
+    ax:coordSource "DXF:M-014" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-206" ;
+    ax:localXY "528836.0,-53333.1" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:quantity "3" ;
+    ax:readConfidence "high" ;
+    ax:spec "멤브레인 디스크형 Ø520mm, 250L/min"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235382.65 545815.55)" .
+
+axa:M_207 a ax:Asset ;
+    rdfs:label "막분리조 송풍기"@ko ;
+    ax:coordSource "DXF:M-012" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-207 A~C" ;
+    ax:localXY "363155.5,-64766.1" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:powerKW "45" ;
+    ax:quantity "1" ;
+    ax:readConfidence "high" ;
+    ax:spec "단단 터보송풍기, 공기베어링식 VVVF, 36㎥/min×5,500mmAq(53.94kPa)"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235371.21 545812.53)" .
+
+axa:M_208 a ax:Asset ;
+    rdfs:label "분리막"@ko ;
+    ax:coordSource "DXF:M-014" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-208" ;
+    ax:localXY "521862.8,-70390.2" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:readConfidence "high" ;
+    ax:spec "2단 PTFE 평막, 2,400㎥/일"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235365.59 545822.53)" .
+
+axa:M_209 a ax:Asset ;
+    rdfs:label "공법 제어반"@ko ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-209" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:quantity "1" ;
+    ax:readConfidence "high" ;
+    ax:spec "PLC 제어반, 2,400㎥/일"@ko ;
+    ax:tagStatus "verified" ;
+    rdfs:comment "※파일럿 오판정 정정: 탈취송풍기 아님"@ko .
+
+axa:M_210 a ax:Asset ;
+    rdfs:label "처리수 흡입펌프"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-210 A~D" ;
+    ax:localXY "455383.6,-60969.7" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:powerKW "7.5" ;
+    ax:quantity "2" ;
+    ax:readConfidence "high" ;
+    ax:spec "자흡식 횡축 편흡입 원심펌프 VVVF, 1.4㎥/min×13mH"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235375.01 545804.41)" ;
+    rdfs:comment "인버터 전기공급분"@ko .
+
+axa:M_211 a ax:Asset ;
+    rdfs:label "잉여슬러지 인발펌프"@ko ;
+    ax:coordSource "DXF:M-014" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-211 A~D" ;
+    ax:localXY "522087.1,-65712.9" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:powerKW "3.7" ;
+    ax:quantity "2" ;
+    ax:readConfidence "high" ;
+    ax:spec "횡축 스프르트 펌프, 0.5㎥/min×8mH"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235370.27 545822.30)" ;
+    rdfs:comment "모니터링유닛 포함"@ko .
+
+axa:M_212 a ax:Asset ;
+    rdfs:label "잉여슬러지 이송밸브"@ko ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-212 A,B" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:readConfidence "high" ;
+    ax:spec "전동 게이트 밸브, 100A×10K(1MPa)"@ko ;
+    ax:tagStatus "verified" .
+
+axa:M_213 a ax:Asset ;
+    rdfs:label "잉여슬러지 반송밸브"@ko ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-213 A,B" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:readConfidence "high" ;
+    ax:spec "전동 게이트 밸브, 100A×10K(1MPa)"@ko ;
+    ax:tagStatus "verified" .
+
+axa:M_214 a ax:Asset ;
+    rdfs:label "NaOCl 원액저장"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axa:M_215 ;
+    ax:hasTag "M-214" ;
+    ax:localXY "442125.1,-52031.0" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:quantity "1" ;
+    ax:readConfidence "high",
+        "med" ;
+    ax:spec "PE 원통형 탱크, 교반기 포함, 200L"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235383.95 545817.66)" ;
+    rdfs:comment "NaOCl원액저장→원액이송펌프"@ko .
+
+axa:M_217 a ax:Asset ;
+    rdfs:label "NaOH 저장탱크"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axa:M_218 ;
+    ax:hasTag "M-217" ;
+    ax:localXY "446371.1,-52172.2" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:powerKW "0.75" ;
+    ax:quantity "1식" ;
+    ax:readConfidence "high" ;
+    ax:spec "PE 원통형 탱크, 교반기 포함, 1,000L"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235383.81 545813.42)" ;
+    rdfs:comment "NaOH저장탱크→주입펌프"@ko .
+
+axa:M_219 a ax:Asset ;
+    rdfs:label "바닥배수 펌프"@ko ;
+    ax:coordSource "DXF:M-014" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-219 A,B" ;
+    ax:localXY "519760.1,-63415.9" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:powerKW "0.75" ;
+    ax:readConfidence "med" ;
+    ax:spec "수중 볼텍스 펌프, 0.16㎥/min×10mH"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235372.56 545824.63)" ;
+    rdfs:comment "MOP"@ko .
+
+axa:M_220 a ax:Asset ;
+    rdfs:label "세정수조 드레인 펌프"@ko ;
+    ax:coordSource "DXF:M-014" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-220 A,B" ;
+    ax:localXY "527043.8,-66074.2" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:powerKW "1.5" ;
+    ax:quantity "1" ;
+    ax:readConfidence "med" ;
+    ax:spec "횡축 볼텍스 펌프, 0.2㎥/min×8mH"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235369.91 545817.35)" .
+
+axa:M_221 a ax:Asset ;
+    rdfs:label "유지관리용 호이스트"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-221" ;
+    ax:localXY "443071.6,-65482.5" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:powerKW "1.5 / 0.4" ;
+    ax:readConfidence "high" ;
+    ax:spec "전동식 모노레일 호이스트, W100×L4m×H10m"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235370.50 545816.72)" ;
+    rdfs:comment "공법 기자재"@ko .
+
+axa:M_222 a ax:Asset ;
+    rdfs:label "송풍기용 호이스트"@ko ;
+    ax:coordSource "DXF:M-012" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-222" ;
+    ax:localXY "366833.6,-64908.5" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:powerKW "1.5 / 0.4" ;
+    ax:readConfidence "high" ;
+    ax:spec "전동식 모노레일 호이스트, W100×L18m×H6m"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235371.07 545808.86)" ;
+    rdfs:comment "공법 기자재"@ko .
+
+axa:M_223 a ax:Asset ;
+    rdfs:label "막유지관리용 호이스트"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-223" ;
+    ax:localXY "439683.6,-66671.6" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:powerKW "1.5 / 0.4" ;
+    ax:readConfidence "high" ;
+    ax:spec "전동식 모노레일 호이스트, W100×L33m×H10m"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235369.31 545820.11)" ;
+    rdfs:comment "공법 기자재"@ko .
+
+axa:M_301 a ax:Asset ;
+    rdfs:label "처리수펌프"@ko ;
+    ax:coordSource "DXF:M-014" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axa:M_302 ;
+    ax:hasTag "M-301 A~C" ;
+    ax:localXY "540076.7,-57932.9" ;
+    ax:partOf axs:SYS_IPR ;
+    ax:quantity "3" ;
+    ax:readConfidence "high",
+        "med" ;
+    ax:spec "수중모터펌프(자동탈착식), 1.0㎥/min×21mH"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235378.05 545804.31)" ;
+    rdfs:comment "모니터링유닛 포함"@ko,
+        "처리수펌프→총인처리시설(IPR)"@ko .
+
+axa:M_302_10 a ax:Asset ;
+    rdfs:label "수위계(약품저장탱크)"@ko ;
+    ax:hasTag "M-302-10" ;
+    ax:partOf axs:SYS_IPR ;
+    ax:quantity "1" ;
+    ax:readConfidence "med" ;
+    ax:spec "초음파"@ko ;
+    ax:tagStatus "verified" .
+
+axa:M_302_2 a ax:Asset ;
+    rdfs:label "약품저장 탱크"@ko ;
+    ax:conveys "응집약품" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axa:M_302_3 ;
+    ax:hasTag "M-302-2" ;
+    ax:medium "chem" ;
+    ax:partOf axs:SYS_IPR ;
+    ax:readConfidence "high" ;
+    ax:spec "수직원통형 PE, 5㎥, 1.9m×2.4mH"@ko ;
+    ax:tagStatus "verified" .
+
+axa:M_302_4 a ax:Asset ;
+    rdfs:label "공기압축기"@ko ;
+    ax:conveys "압축공기" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axa:M_302_1 ;
+    ax:hasTag "M-302-4" ;
+    ax:medium "air" ;
+    ax:partOf axs:SYS_IPR ;
+    ax:readConfidence "high" ;
+    ax:spec "왕복동식 공기압축기, 1.9㎥/min"@ko ;
+    ax:tagStatus "verified" ;
+    rdfs:comment "← M-007 판독 '공기압축기'"@ko,
+        "공기압축기 — 계통도 DXF 확인"@ko,
+        "역세·산기용 압축공기. 공기저장탱크는 M-302 패키지 내부 구성으로 추정(기기목록 별도태그 없음)"@ko .
+
+axa:M_302_5 a ax:Asset ;
+    rdfs:label "IPR 종합제어반"@ko ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-302-5" ;
+    ax:partOf axs:SYS_IPR ;
+    ax:quantity "1" ;
+    ax:readConfidence "high" ;
+    ax:spec "자립형 판넬(사이트 Control Panel 포함)"@ko ;
+    ax:tagStatus "verified" .
+
+axa:M_302_6 a ax:Asset ;
+    rdfs:label "유량전송계(Filter 유입배관)"@ko ;
+    ax:hasTag "M-302-6" ;
+    ax:partOf axs:SYS_IPR ;
+    ax:quantity "1" ;
+    ax:readConfidence "med" ;
+    ax:spec "Magnetic Type, 150A"@ko ;
+    ax:tagStatus "verified" .
+
+axa:M_302_7 a ax:Asset ;
+    rdfs:label "레벨스위치(IPR-Filter)"@ko ;
+    ax:hasTag "M-302-7" ;
+    ax:partOf axs:SYS_IPR ;
+    ax:readConfidence "med" ;
+    ax:spec "Electrode (3P)"@ko ;
+    ax:tagStatus "verified" .
+
+axa:M_302_8 a ax:Asset ;
+    rdfs:label "레벨스위치(IPR-Filter)"@ko ;
+    ax:hasTag "M-302-8" ;
+    ax:partOf axs:SYS_IPR ;
+    ax:readConfidence "high" ;
+    ax:spec "Float"@ko ;
+    ax:tagStatus "verified" ;
+    rdfs:comment "사용자 정정"@ko .
+
+axa:M_302_9 a ax:Asset ;
+    rdfs:label "압력전송계(IPR 유입배관)"@ko ;
+    ax:hasTag "M-302-9" ;
+    ax:partOf axs:SYS_IPR ;
+    ax:readConfidence "med" ;
+    ax:spec "Diaphragm (침적식)"@ko ;
+    ax:tagStatus "verified" .
+
+axa:M_303 a ax:Asset ;
+    rdfs:label "유지관리용 호이스트"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-303" ;
+    ax:localXY "453442.8,-52298.2" ;
+    ax:partOf axs:SYS_IPR ;
+    ax:quantity "1" ;
+    ax:readConfidence "high" ;
+    ax:spec "전동식 모노레일 호이스트, W100×L4m×H11m"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235383.68 545806.35)" ;
+    rdfs:comment "MOP"@ko .
+
+axa:M_401 a ax:Asset ;
+    rdfs:label "용수공급장치"@ko ;
+    ax:coordSource "DXF:M-014" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-401" ;
+    ax:localXY "540537.8,-64466.5" ;
+    ax:partOf axs:SYS_UTILITY ;
+    ax:powerKW "5.5×2" ;
+    ax:readConfidence "high",
+        "med" ;
+    ax:spec "부스터 펌프(격막식) VVVF, 0.3㎥/H×40mH×3(1)대"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235371.51 545803.85)" ;
+    rdfs:comment "MOP"@ko,
+        "용수공급장치→장내 용수(공기공급/세정). M-008에 등장"@ko .
+
+axa:M_502 a ax:Asset ;
+    rdfs:label "슬러지공급 펌프"@ko ;
+    ax:coordSource "DXF:M-014" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axa:M_501 ;
+    ax:hasTag "M-502 A~C" ;
+    ax:localXY "540803.3,-66785.0" ;
+    ax:partOf axs:SYS_DEWATER ;
+    ax:powerKW "1.5" ;
+    ax:quantity "1" ;
+    ax:readConfidence "high",
+        "med" ;
+    ax:spec "일축나사식 용적형펌프 VVVF, 2.0㎥/h×2kg/㎠(0.2MPa)"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235369.20 545803.59)" ;
+    rdfs:comment "슬러지공급펌프→탈수기"@ko .
+
+axa:M_506 a ax:Asset ;
+    rdfs:label "슬러지저류조 송풍기"@ko ;
+    ax:conveys "공기" ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axa:M_505 ;
+    ax:hasTag "M-506" ;
+    ax:localXY "455383.6,-75933.6" ;
+    ax:medium "air" ;
+    ax:partOf axs:SYS_DEWATER ;
+    ax:powerKW "5.5" ;
+    ax:quantity "1" ;
+    ax:readConfidence "high",
+        "med" ;
+    ax:spec "루츠형 브로와, 방진가대 포함, 2.0㎥/min×5,300mmAq(51.98kPa)"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235360.05 545804.41)" ;
+    rdfs:comment "슬러지저류조 송풍기→산기장치"@ko .
+
+axa:M_507 a ax:Asset ;
+    rdfs:label "폴리머 자동용해장치"@ko ;
+    ax:coordSource "DXF:M-012" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axa:M_508 ;
+    ax:hasTag "M-507" ;
+    ax:localXY "355655.8,-60968.6" ;
+    ax:partOf axs:SYS_DEWATER ;
+    ax:readConfidence "high",
+        "med" ;
+    ax:spec "연속식 액상 용해장치, 0.32㎥/hr 이상"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235375.01 545820.03)" ;
+    rdfs:comment "폴리머 자동용해장치→폴리머 공급펌프"@ko .
+
+axa:M_601 a ax:Asset ;
+    rdfs:label "탈취기"@ko ;
+    ax:conveys "탈취공기" ;
+    ax:coordSource "DXF:M-012" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axa:M_601_1 ;
+    ax:hasTag "M-601" ;
+    ax:localXY "367356.2,-73938.3" ;
+    ax:medium "odor" ;
+    ax:partOf axs:SYS_DEODOR ;
+    ax:powerKW "0.75×2" ;
+    ax:quantity "1식" ;
+    ax:readConfidence "high" ;
+    ax:spec "복합 탈취기, 부속설비 포함, 130㎥/분"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235362.04 545808.33)" ;
+    rdfs:comment "기기목록 '바.탈취설비' 확정. M-011 계통도 일치"@ko,
+        "탈취기 — M-011 DXF 확인, 태그체계 M-601 재확정"@ko,
+        "탈취기(복합)→탈취팬→배기. 악취원=콘테이너실 등"@ko .
+
+axg:AM_001 a ax:Drawing ;
+    rdfs:label "범례표"@ko ;
+    ax:discipline "건축기계" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AM-001" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 별권 확인"@ko .
+
+axg:AM_002 a ax:Drawing ;
+    rdfs:label "장비일람표-1"@ko ;
+    ax:discipline "건축기계" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AM-002" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 별권 확인"@ko .
+
+axg:AM_003 a ax:Drawing ;
+    rdfs:label "장비일람표-2"@ko ;
+    ax:discipline "건축기계" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AM-003" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 별권 확인"@ko .
+
+axg:AM_004 a ax:Drawing ;
+    rdfs:label "관리동 냉난방 계통도"@ko ;
+    ax:discipline "건축기계" ;
+    ax:drawingKind "스키매틱" ;
+    ax:drawingNo "AM-004" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 별권 확인"@ko .
+
+axg:AM_005 a ax:Drawing ;
+    rdfs:label "관리동 지상1층 냉난방배관 평면도"@ko ;
+    ax:discipline "건축기계" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AM-005" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 별권 확인"@ko .
+
+axg:AM_006 a ax:Drawing ;
+    rdfs:label "관리동 지상1층 냉난방제어 평면도"@ko ;
+    ax:discipline "건축기계" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AM-006" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 별권 확인"@ko .
+
+axg:AM_007 a ax:Drawing ;
+    rdfs:label "관리동 난방배관 평면도(층 표기 OCR 불확실)"@ko ;
+    ax:discipline "건축기계" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AM-007" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 별권 확인"@ko .
+
+axg:AM_008 a ax:Drawing ;
+    rdfs:label "관리동 PIT 환기덕트 평면도"@ko ;
+    ax:discipline "건축기계" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AM-008" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 별권 확인"@ko .
+
+axg:AM_009 a ax:Drawing ;
+    rdfs:label "관리동 지상1층 환기덕트 평면도"@ko ;
+    ax:discipline "건축기계" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AM-009" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 별권 확인"@ko .
+
+axg:AM_010 a ax:Drawing ;
+    rdfs:label "관리동 지상1층 위생배관 평면도"@ko ;
+    ax:discipline "건축기계" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AM-010" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 별권 확인"@ko .
+
+axg:AM_011 a ax:Drawing ;
+    rdfs:label "설비동 지상1층 냉난방·위생배관 평면도"@ko ;
+    ax:discipline "건축기계" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AM-011" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 별권 확인"@ko .
+
+axg:AM_012 a ax:Drawing ;
+    rdfs:label "설비동 냉난방배관 평면도(층 표기 OCR 불확실)"@ko ;
+    ax:discipline "건축기계" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AM-012" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 별권 확인"@ko .
+
+axg:AM_013 a ax:Drawing ;
+    rdfs:label "설비동 환기덕트 계통도"@ko ;
+    ax:discipline "건축기계" ;
+    ax:drawingKind "스키매틱" ;
+    ax:drawingNo "AM-013" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 별권 확인"@ko .
+
+axg:AM_014 a ax:Drawing ;
+    rdfs:label "설비동 공동구 환기덕트 평면도"@ko ;
+    ax:discipline "건축기계" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AM-014" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 별권 확인"@ko .
+
+axg:AM_015 a ax:Drawing ;
+    rdfs:label "설비동 지하1층 환기덕트 평면도"@ko ;
+    ax:discipline "건축기계" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AM-015" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 별권 확인"@ko .
+
+axg:AM_016 a ax:Drawing ;
+    rdfs:label "설비동 지상1층 환기덕트 평면도"@ko ;
+    ax:discipline "건축기계" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AM-016" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 별권 확인"@ko .
+
+axg:AM_017 a ax:Drawing ;
+    rdfs:label "설비동 환기덕트 A-A 단면도"@ko ;
+    ax:discipline "건축기계" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AM-017" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 별권 확인"@ko .
+
+axg:AM_018 a ax:Drawing ;
+    rdfs:label "설비동 환기덕트 B-B 단면도"@ko ;
+    ax:discipline "건축기계" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AM-018" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 별권 확인"@ko .
+
+axg:AS_001 a ax:Drawing ;
+    rdfs:label "구조일반사항(1)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-001" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 208 ;
+    ax:scale "NONE" .
+
+axg:AS_002 a ax:Drawing ;
+    rdfs:label "구조일반사항(2)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-002" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 209 ;
+    ax:scale "NONE" .
+
+axg:AS_003 a ax:Drawing ;
+    rdfs:label "구조일반사항(3)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-003" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 210 ;
+    ax:scale "NONE" .
+
+axg:AS_004 a ax:Drawing ;
+    rdfs:label "구조일반사항(4)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-004" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 211 ;
+    ax:scale "NONE" .
+
+axg:AS_005 a ax:Drawing ;
+    rdfs:label "구조일반사항(5)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-005" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 212 ;
+    ax:scale "NONE" .
+
+axg:AS_006 a ax:Drawing ;
+    rdfs:label "구조일반사항(6)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-006" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 213 ;
+    ax:scale "NONE" .
+
+axg:AS_007 a ax:Drawing ;
+    rdfs:label "구조일반사항(7)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-007" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 214 ;
+    ax:scale "NONE" .
+
+axg:AS_008 a ax:Drawing ;
+    rdfs:label "구조일반사항(8)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-008" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 215 ;
+    ax:scale "NONE" .
+
+axg:AS_009 a ax:Drawing ;
+    rdfs:label "구조일반사항(9)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-009" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 216 ;
+    ax:scale "NONE" .
+
+axg:AS_101 a ax:Drawing ;
+    rdfs:label "관리동 주심도"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-101" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 217 ;
+    ax:scale "1:30,60" .
+
+axg:AS_1101 a ax:Drawing ;
+    rdfs:label "설비동 주심도"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-1101" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 232 ;
+    ax:scale "1:50,100" .
+
+axg:AS_1201 a ax:Drawing ;
+    rdfs:label "설비동 지상1층 구조평면도"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-1201" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 233 ;
+    ax:scale "1:100" .
+
+axg:AS_1202 a ax:Drawing ;
+    rdfs:label "설비동 지붕 구조평면도(1)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-1202" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 234 ;
+    ax:scale "1:100" .
+
+axg:AS_1203 a ax:Drawing ;
+    rdfs:label "설비동 지붕 구조평면도(2)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-1203" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 235 ;
+    ax:scale "1:100" .
+
+axg:AS_1301 a ax:Drawing ;
+    rdfs:label "설비동 보일람표"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-1301" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 236 ;
+    ax:scale "1:30" .
+
+axg:AS_1302 a ax:Drawing ;
+    rdfs:label "설비동 스라브일람표"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-1302" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 237 ;
+    ax:scale "NONE" .
+
+axg:AS_1303 a ax:Drawing ;
+    rdfs:label "설비동 잡배근도"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-1303" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 238 ;
+    ax:scale "1:30" .
+
+axg:AS_1401 a ax:Drawing ;
+    rdfs:label "설비동 구조입면도(1)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-1401" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 239 ;
+    ax:scale "1:100" .
+
+axg:AS_1402 a ax:Drawing ;
+    rdfs:label "설비동 구조입면도(2)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-1402" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 240 ;
+    ax:scale "1:100" .
+
+axg:AS_1501 a ax:Drawing ;
+    rdfs:label "설비동 구조단면도(1)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-1501" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 241 ;
+    ax:scale "1:60" .
+
+axg:AS_1502 a ax:Drawing ;
+    rdfs:label "설비동 구조단면도(2)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-1502" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 242 ;
+    ax:scale "1:60" .
+
+axg:AS_1503 a ax:Drawing ;
+    rdfs:label "설비동 구조단면도(3)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-1503" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 243 ;
+    ax:scale "1:60" .
+
+axg:AS_1504 a ax:Drawing ;
+    rdfs:label "설비동 구조단면도(4)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-1504" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 244 ;
+    ax:scale "1:60" .
+
+axg:AS_1505 a ax:Drawing ;
+    rdfs:label "설비동 구조단면도(5)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-1505" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 245 ;
+    ax:scale "1:60" .
+
+axg:AS_1506 a ax:Drawing ;
+    rdfs:label "설비동 구조단면도(6)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-1506" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 246 ;
+    ax:scale "1:60" .
+
+axg:AS_201 a ax:Drawing ;
+    rdfs:label "관리동 기초 및 PIT 구조평면도"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-201" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 218 ;
+    ax:scale "1:60" .
+
+axg:AS_202 a ax:Drawing ;
+    rdfs:label "관리동 지상1층 구조평면도"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-202" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 219 ;
+    ax:scale "1:60" .
+
+axg:AS_203 a ax:Drawing ;
+    rdfs:label "관리동 지붕 구조평면도(1)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-203" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 220 ;
+    ax:scale "1:60" .
+
+axg:AS_204 a ax:Drawing ;
+    rdfs:label "관리동 지붕 구조평면도(2)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-204" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 221 ;
+    ax:scale "1:60" .
+
+axg:AS_301 a ax:Drawing ;
+    rdfs:label "관리동 보일람표(1)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-301" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 222 ;
+    ax:scale "1:30" .
+
+axg:AS_302 a ax:Drawing ;
+    rdfs:label "관리동 보일람표(2)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-302" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 223 ;
+    ax:scale "1:30" .
+
+axg:AS_303 a ax:Drawing ;
+    rdfs:label "관리동 스라브 일람표"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-303" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 224 ;
+    ax:scale "NONE" .
+
+axg:AS_304 a ax:Drawing ;
+    rdfs:label "관리동 잡배근도"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-304" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 225 ;
+    ax:scale "1:30" .
+
+axg:AS_401 a ax:Drawing ;
+    rdfs:label "관리동 구조입면도(1)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-401" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 226 ;
+    ax:scale "1:60" .
+
+axg:AS_402 a ax:Drawing ;
+    rdfs:label "관리동 구조입면도(2)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-402" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 227 ;
+    ax:scale "1:60" .
+
+axg:AS_501 a ax:Drawing ;
+    rdfs:label "관리동 구조단면도(1)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-501" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 228 ;
+    ax:scale "1:60" .
+
+axg:AS_502 a ax:Drawing ;
+    rdfs:label "관리동 구조단면도(2)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-502" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 229 ;
+    ax:scale "1:60" .
+
+axg:AS_503 a ax:Drawing ;
+    rdfs:label "관리동 구조단면도(3)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-503" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 230 ;
+    ax:scale "1:60" .
+
+axg:AS_504 a ax:Drawing ;
+    rdfs:label "관리동 구조단면도(4)"@ko ;
+    ax:discipline "건축구조" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "AS-504" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 231 ;
+    ax:scale "1:60" .
+
+axg:A_001 a ax:Drawing ;
+    rdfs:label "건축개요"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-001" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 155 ;
+    ax:scale "NONE" .
+
+axg:A_002 a ax:Drawing ;
+    rdfs:label "면적산출표"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-002" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 156 ;
+    ax:scale "NONE" .
+
+axg:A_003 a ax:Drawing ;
+    rdfs:label "건축배치도"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "A-003" ;
+    ax:ingestPolicy "SHP 편입" ;
+    ax:ingestStatus "편입완료" ;
+    ax:pdfPage 157 ;
+    ax:scale "1:300" ;
+    rdfs:comment "시설 footprint SHP(EPSG:5186) 추출 완료 — 폴리곤 닫기 대기"@ko .
+
+axg:A_011 a ax:Drawing ;
+    rdfs:label "실내재료마감표"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-011" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 158 ;
+    ax:scale "NONE" .
+
+axg:A_012 a ax:Drawing ;
+    rdfs:label "실내재료마감상세도(1)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-012" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 159 ;
+    ax:scale "NONE" .
+
+axg:A_013 a ax:Drawing ;
+    rdfs:label "실내재료마감상세도(2)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-013" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 160 ;
+    ax:scale "NONE" .
+
+axg:A_014 a ax:Drawing ;
+    rdfs:label "실내재료마감상세도(3)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-014" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 161 ;
+    ax:scale "NONE" .
+
+axg:A_021 a ax:Drawing ;
+    rdfs:label "관리동 방수계획도"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-021" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 162 ;
+    ax:scale "NONE" .
+
+axg:A_022 a ax:Drawing ;
+    rdfs:label "설비동 방수계획도"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-022" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 163 ;
+    ax:scale "NONE" .
+
+axg:A_031 a ax:Drawing ;
+    rdfs:label "관리동 단열계획도"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-031" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 164 ;
+    ax:scale "NONE" .
+
+axg:A_041 a ax:Drawing ;
+    rdfs:label "관리동 토공계획도"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-041" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 165 ;
+    ax:scale "1:100" .
+
+axg:A_101 a ax:Drawing ;
+    rdfs:label "관리동 PIT 평면도"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-101" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 166 ;
+    ax:scale "1:60" .
+
+axg:A_102 a ax:Drawing ;
+    rdfs:label "관리동 지상1층 평면도"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-102" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 167 ;
+    ax:scale "1:60" .
+
+axg:A_103 a ax:Drawing ;
+    rdfs:label "관리동 지붕 평면도"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-103" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 168 ;
+    ax:scale "1:60" .
+
+axg:A_1101 a ax:Drawing ;
+    rdfs:label "설비동 공동구 평면도"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1101" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 187 ;
+    ax:scale "1:100" .
+
+axg:A_1102 a ax:Drawing ;
+    rdfs:label "설비동 지하1층 평면도"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1102" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 188 ;
+    ax:scale "1:100" .
+
+axg:A_1103 a ax:Drawing ;
+    rdfs:label "설비동 지상1층 평면도"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1103" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 189 ;
+    ax:scale "1:100" .
+
+axg:A_1104 a ax:Drawing ;
+    rdfs:label "설비동 지붕 평면도"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1104" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 190 ;
+    ax:scale "1:100" .
+
+axg:A_1201 a ax:Drawing ;
+    rdfs:label "설비동 입면도(1)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1201" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 191 ;
+    ax:scale "1:100" .
+
+axg:A_1202 a ax:Drawing ;
+    rdfs:label "설비동 입면도(2)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1202" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 192 ;
+    ax:scale "1:100" .
+
+axg:A_1301 a ax:Drawing ;
+    rdfs:label "설비동 주단면도(1)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1301" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 193 ;
+    ax:scale "1:60" .
+
+axg:A_1302 a ax:Drawing ;
+    rdfs:label "설비동 주단면도(2)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1302" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 194 ;
+    ax:scale "1:60" .
+
+axg:A_1303 a ax:Drawing ;
+    rdfs:label "설비동 주단면도(3)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1303" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 195 ;
+    ax:scale "1:60" .
+
+axg:A_1304 a ax:Drawing ;
+    rdfs:label "설비동 주단면도(4)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1304" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 196 ;
+    ax:scale "1:60" .
+
+axg:A_1305 a ax:Drawing ;
+    rdfs:label "설비동 주단면도(5)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1305" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 197 ;
+    ax:scale "1:60" .
+
+axg:A_1306 a ax:Drawing ;
+    rdfs:label "설비동 주단면도(6)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1306" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 198 ;
+    ax:scale "1:60" .
+
+axg:A_1401 a ax:Drawing ;
+    rdfs:label "설비동 창호평면도"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1401" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 199 ;
+    ax:scale "1:100" .
+
+axg:A_1402 a ax:Drawing ;
+    rdfs:label "설비동 창호일람표(1)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1402" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 200 ;
+    ax:scale "1:60" .
+
+axg:A_1403 a ax:Drawing ;
+    rdfs:label "설비동 창호일람표(2)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1403" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 201 ;
+    ax:scale "1:60" .
+
+axg:A_1404 a ax:Drawing ;
+    rdfs:label "설비동 창호일람표(3)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1404" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 202 ;
+    ax:scale "1:60" .
+
+axg:A_1501 a ax:Drawing ;
+    rdfs:label "설비동 잡상세도(1)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1501" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 203 ;
+    ax:scale "1:10" .
+
+axg:A_1502 a ax:Drawing ;
+    rdfs:label "설비동 잡상세도(2)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1502" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 204 ;
+    ax:scale "1:10" .
+
+axg:A_1503 a ax:Drawing ;
+    rdfs:label "설비동 잡상세도(3)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1503" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 205 ;
+    ax:scale "1:10" .
+
+axg:A_1504 a ax:Drawing ;
+    rdfs:label "설비동 보강블럭 상세도"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-1504" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 206 ;
+    ax:scale "1:50" .
+
+axg:A_201 a ax:Drawing ;
+    rdfs:label "관리동 입면도(1)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-201" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 169 ;
+    ax:scale "1:60" .
+
+axg:A_202 a ax:Drawing ;
+    rdfs:label "관리동 입면도(2)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-202" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 170 ;
+    ax:scale "1:60" .
+
+axg:A_301 a ax:Drawing ;
+    rdfs:label "관리동 주단면도(1)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-301" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 171 ;
+    ax:scale "1:60" .
+
+axg:A_302 a ax:Drawing ;
+    rdfs:label "관리동 주단면도(2)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-302" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 172 ;
+    ax:scale "1:60" .
+
+axg:A_303 a ax:Drawing ;
+    rdfs:label "관리동 주단면도(3)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-303" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 173 ;
+    ax:scale "1:60" .
+
+axg:A_304 a ax:Drawing ;
+    rdfs:label "관리동 주단면도(4)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-304" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 174 ;
+    ax:scale "1:60" .
+
+axg:A_401 a ax:Drawing ;
+    rdfs:label "관리동 부분단면도(1)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-401" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 175 ;
+    ax:scale "1:40" .
+
+axg:A_402 a ax:Drawing ;
+    rdfs:label "관리동 부분단면도(2)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-402" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 176 ;
+    ax:scale "1:40" .
+
+axg:A_501 a ax:Drawing ;
+    rdfs:label "관리동 PIT 창호평면도"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-501" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 177 ;
+    ax:scale "1:60" .
+
+axg:A_502 a ax:Drawing ;
+    rdfs:label "관리동 지상1층 창호평면도"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-502" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 178 ;
+    ax:scale "1:60" .
+
+axg:A_503 a ax:Drawing ;
+    rdfs:label "관리동 창호일람표(1)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-503" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 179 ;
+    ax:scale "1:60" .
+
+axg:A_504 a ax:Drawing ;
+    rdfs:label "관리동 창호일람표(2)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-504" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 180 ;
+    ax:scale "1:60" .
+
+axg:A_601 a ax:Drawing ;
+    rdfs:label "화장실 확대평면 및 전개도"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-601" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 181 ;
+    ax:scale "1:40" .
+
+axg:A_701 a ax:Drawing ;
+    rdfs:label "관리동 잡상세도(1)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-701" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 182 ;
+    ax:scale "1:10,30" .
+
+axg:A_702 a ax:Drawing ;
+    rdfs:label "관리동 잡상세도(2)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-702" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 183 ;
+    ax:scale "1:10,30" .
+
+axg:A_703 a ax:Drawing ;
+    rdfs:label "관리동 잡상세도(3)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-703" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 184 ;
+    ax:scale "1:10,30" .
+
+axg:A_704 a ax:Drawing ;
+    rdfs:label "관리동 잡상세도(4)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-704" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 185 ;
+    ax:scale "1:10,30" .
+
+axg:A_705 a ax:Drawing ;
+    rdfs:label "관리동 잡상세도(5)"@ko ;
+    ax:discipline "건축" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "A-705" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 186 ;
+    ax:scale "1:10,30" .
+
+axg:C_001 a ax:Drawing ;
+    rdfs:label "전체 계획평면도"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "C-001" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 7 ;
+    ax:scale "1:4,000" ;
+    rdfs:comment "광역. 배경은 카카오맵 대체"@ko .
+
+axg:C_003 a ax:Drawing ;
+    rdfs:label "처리계통도"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "스키매틱" ;
+    ax:drawingNo "C-003" ;
+    ax:ingestPolicy "그래프 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 10 ;
+    ax:scale "NONE" ;
+    rdfs:comment "토목 수리계통. DO 슬라이스 원천 도면과 대조 필요"@ko .
+
+axg:C_004 a ax:Drawing ;
+    rdfs:label "수리종단도"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-004" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 11 .
+
+axg:C_005 a ax:Drawing ;
+    rdfs:label "토공 계획평면도"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-005" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 12 ;
+    ax:scale "1:300" .
+
+axg:C_006 a ax:Drawing ;
+    rdfs:label "토공 종단면도"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-006" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 13 ;
+    ax:scale "H=1:200,V=1:100" .
+
+axg:C_007 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(1)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-007" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 14 ;
+    ax:scale "1:150" .
+
+axg:C_008 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(2)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-008" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 15 ;
+    ax:scale "1:150" .
+
+axg:C_009 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(3)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-009" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 16 ;
+    ax:scale "1:150" .
+
+axg:C_010 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(4)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-010" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 17 ;
+    ax:scale "1:150" .
+
+axg:C_011 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(5)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-011" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 18 ;
+    ax:scale "1:150" .
+
+axg:C_012 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(6)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-012" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 19 ;
+    ax:scale "1:150" .
+
+axg:C_013 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(7)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-013" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 20 ;
+    ax:scale "1:150" .
+
+axg:C_014 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(8)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-014" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 21 ;
+    ax:scale "1:150" .
+
+axg:C_015 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(9)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-015" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 22 ;
+    ax:scale "1:150" .
+
+axg:C_016 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(10)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-016" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 23 ;
+    ax:scale "1:150" .
+
+axg:C_017 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(11)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-017" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 24 ;
+    ax:scale "1:150" .
+
+axg:C_018 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(12)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-018" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 25 ;
+    ax:scale "1:150" .
+
+axg:C_019 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(13)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-019" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 26 ;
+    ax:scale "1:150" .
+
+axg:C_020 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(14)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-020" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 27 ;
+    ax:scale "1:150" .
+
+axg:C_021 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(15)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-021" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 28 ;
+    ax:scale "1:150" .
+
+axg:C_022 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(16)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-022" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 29 ;
+    ax:scale "1:150" .
+
+axg:C_023 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(17)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-023" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 30 ;
+    ax:scale "1:150" .
+
+axg:C_024 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(18)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-024" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 31 ;
+    ax:scale "1:150" .
+
+axg:C_025 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(19)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-025" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 32 ;
+    ax:scale "1:150" .
+
+axg:C_026 a ax:Drawing ;
+    rdfs:label "토공 횡단면도(20)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-026" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 33 ;
+    ax:scale "1:150" .
+
+axg:C_027 a ax:Drawing ;
+    rdfs:label "처리시설 일반도(1)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-027" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 34 ;
+    ax:scale "1:100" ;
+    rdfs:comment "구조물 제원 — 필요 시 편입 재검토"@ko .
+
+axg:C_028 a ax:Drawing ;
+    rdfs:label "처리시설 일반도(2)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-028" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 35 ;
+    ax:scale "1:100" ;
+    rdfs:comment "구조물 제원 — 필요 시 편입 재검토"@ko .
+
+axg:C_029 a ax:Drawing ;
+    rdfs:label "처리시설 일반도(3)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-029" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 36 ;
+    ax:scale "1:100" ;
+    rdfs:comment "구조물 제원 — 필요 시 편입 재검토"@ko .
+
+axg:C_030 a ax:Drawing ;
+    rdfs:label "처리시설 일반도(4)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-030" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 37 ;
+    ax:scale "1:100" ;
+    rdfs:comment "구조물 제원 — 필요 시 편입 재검토"@ko .
+
+axg:C_031 a ax:Drawing ;
+    rdfs:label "처리시설 일반도(5)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-031" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 38 ;
+    ax:scale "1:100" ;
+    rdfs:comment "구조물 제원 — 필요 시 편입 재검토"@ko .
+
+axg:C_032 a ax:Drawing ;
+    rdfs:label "처리시설 일반도(6)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-032" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 39 ;
+    ax:scale "1:100" ;
+    rdfs:comment "구조물 제원 — 필요 시 편입 재검토"@ko .
+
+axg:C_033 a ax:Drawing ;
+    rdfs:label "처리시설 일반도(7)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-033" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 40 ;
+    ax:scale "1:100" ;
+    rdfs:comment "구조물 제원 — 필요 시 편입 재검토"@ko .
+
+axg:C_034 a ax:Drawing ;
+    rdfs:label "처리시설 일반도(8)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-034" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 41 ;
+    ax:scale "1:100" ;
+    rdfs:comment "구조물 제원 — 필요 시 편입 재검토"@ko .
+
+axg:C_035 a ax:Drawing ;
+    rdfs:label "처리시설 일반도(9)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-035" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 42 ;
+    ax:scale "1:100" ;
+    rdfs:comment "구조물 제원 — 필요 시 편입 재검토"@ko .
+
+axg:C_036 a ax:Drawing ;
+    rdfs:label "처리시설 일반도(10)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-036" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 43 ;
+    ax:scale "1:100" ;
+    rdfs:comment "구조물 제원 — 필요 시 편입 재검토"@ko .
+
+axg:C_037 a ax:Drawing ;
+    rdfs:label "처리시설 일반도(11)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-037" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 44 ;
+    ax:scale "1:100" ;
+    rdfs:comment "구조물 제원 — 필요 시 편입 재검토"@ko .
+
+axg:C_038 a ax:Drawing ;
+    rdfs:label "처리시설 일반도(12)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-038" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 45 ;
+    ax:scale "1:100" ;
+    rdfs:comment "구조물 제원 — 필요 시 편입 재검토"@ko .
+
+axg:C_039 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(1)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-039" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 46 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_040 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(2)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-040" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 47 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_041 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(3)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-041" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 48 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_042 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(4)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-042" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 49 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_043 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(5)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-043" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 50 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_044 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(6)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-044" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 51 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_045 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(7)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-045" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 52 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_046 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(8)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-046" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 53 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_047 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(9)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-047" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 54 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_048 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(10)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-048" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 55 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_049 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(11)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-049" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 56 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_050 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(12)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-050" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 57 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_051 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(13)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-051" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 58 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_052 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(14)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-052" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 59 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_053 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(15)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-053" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 60 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_054 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(16)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-054" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 61 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_055 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(17)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-055" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 62 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_056 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(18)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-056" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 63 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_057 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(19)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-057" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 64 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_058 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(20)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-058" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 65 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_059 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(21)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-059" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 66 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_060 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(22)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-060" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 67 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_061 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(23)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-061" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 68 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_062 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(24)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-062" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 69 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_063 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(25)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-063" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 70 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_064 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(26)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-064" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 71 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_065 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(27)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-065" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 72 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_066 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(28)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-066" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 73 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_067 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(29)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-067" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 74 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_068 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(30)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-068" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 75 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_069 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(31)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-069" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 76 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_070 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(32)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-070" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 77 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_071 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(33)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-071" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 78 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_072 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(34)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-072" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 79 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_073 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(35)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-073" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 80 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_074 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(36)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-074" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 81 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_075 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(37)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-075" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 82 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_076 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(38)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-076" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 83 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_077 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(39)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-077" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 84 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_078 a ax:Drawing ;
+    rdfs:label "처리시설 배근도(40)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-078" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 85 ;
+    ax:scale "AS SHOWN" .
+
+axg:C_079 a ax:Drawing ;
+    rdfs:label "기계 기초 및 슬리브 상세도(1)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-079" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 86 ;
+    ax:scale "1:100" .
+
+axg:C_080 a ax:Drawing ;
+    rdfs:label "기계 기초 및 슬리브 상세도(2)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-080" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 87 ;
+    ax:scale "1:100" .
+
+axg:C_081 a ax:Drawing ;
+    rdfs:label "기계 기초 및 슬리브 상세도(3)"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-081" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 88 ;
+    ax:scale "1:100" .
+
+axg:C_082 a ax:Drawing ;
+    rdfs:label "구내배관 계획평면도"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "C-082" ;
+    ax:ingestPolicy "SHP 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 89 ;
+    ax:scale "1:300" ;
+    rdfs:comment "부지 내 배관 — 편입 후보"@ko .
+
+axg:C_083 a ax:Drawing ;
+    rdfs:label "구내배관 종평면도"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-083" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 90 ;
+    ax:scale "H=1:500,V=1:100" .
+
+axg:C_084 a ax:Drawing ;
+    rdfs:label "시상수 계획평면도"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "C-084" ;
+    ax:ingestPolicy "SHP 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 91 ;
+    ax:scale "1:300" .
+
+axg:C_085 a ax:Drawing ;
+    rdfs:label "시상수 종평면도"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-085" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 92 ;
+    ax:scale "H=1:500,V=1:100" .
+
+axg:C_086 a ax:Drawing ;
+    rdfs:label "포장공 계획평면도"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-086" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 93 ;
+    ax:scale "1:300" .
+
+axg:C_087 a ax:Drawing ;
+    rdfs:label "구내포장 상세도"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-087" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 94 ;
+    ax:scale "NONE" .
+
+axg:C_088 a ax:Drawing ;
+    rdfs:label "부대공 계획평면도"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-088" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 95 ;
+    ax:scale "1:300" .
+
+axg:C_089 a ax:Drawing ;
+    rdfs:label "메쉬휀스 상세도"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-089" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 96 ;
+    ax:scale "NONE" .
+
+axg:C_090 a ax:Drawing ;
+    rdfs:label "출입문 상세도"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-090" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 97 ;
+    ax:scale "NONE" .
+
+axg:C_091 a ax:Drawing ;
+    rdfs:label "공사용 진입도로 계획평면도"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-091" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 98 ;
+    ax:scale "1:300" .
+
+axg:C_092 a ax:Drawing ;
+    rdfs:label "EGI+방진망 상세도"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-092" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 99 ;
+    ax:scale "NONE" .
+
+axg:C_093 a ax:Drawing ;
+    rdfs:label "오수관로 색인도"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-093" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 101 ;
+    ax:scale "1:3,500" .
+
+axg:C_094 a ax:Drawing ;
+    rdfs:label "오수관로 계획평면도(1)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "C-094" ;
+    ax:ingestPolicy "SHP 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 102 ;
+    ax:scale "1:500" ;
+    rdfs:comment "1:500 상세 — 관로 SHP 검증·보완 원천"@ko .
+
+axg:C_095 a ax:Drawing ;
+    rdfs:label "오수관로 계획평면도(2)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "C-095" ;
+    ax:ingestPolicy "SHP 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 103 ;
+    ax:scale "1:500" ;
+    rdfs:comment "1:500 상세 — 관로 SHP 검증·보완 원천"@ko .
+
+axg:C_096 a ax:Drawing ;
+    rdfs:label "오수관로 계획평면도(3)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "C-096" ;
+    ax:ingestPolicy "SHP 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 104 ;
+    ax:scale "1:500" ;
+    rdfs:comment "1:500 상세 — 관로 SHP 검증·보완 원천"@ko .
+
+axg:C_097 a ax:Drawing ;
+    rdfs:label "오수관로 계획평면도(4)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "C-097" ;
+    ax:ingestPolicy "SHP 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 105 ;
+    ax:scale "1:500" ;
+    rdfs:comment "1:500 상세 — 관로 SHP 검증·보완 원천"@ko .
+
+axg:C_098 a ax:Drawing ;
+    rdfs:label "오수관로 계획평면도(5)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "C-098" ;
+    ax:ingestPolicy "SHP 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 106 ;
+    ax:scale "1:500" ;
+    rdfs:comment "1:500 상세 — 관로 SHP 검증·보완 원천"@ko .
+
+axg:C_099 a ax:Drawing ;
+    rdfs:label "오수관로 계획평면도(6)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "C-099" ;
+    ax:ingestPolicy "SHP 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 107 ;
+    ax:scale "1:500" ;
+    rdfs:comment "1:500 상세 — 관로 SHP 검증·보완 원천"@ko .
+
+axg:C_100 a ax:Drawing ;
+    rdfs:label "오수관로 계획평면도(7)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "C-100" ;
+    ax:ingestPolicy "SHP 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 108 ;
+    ax:scale "1:500" ;
+    rdfs:comment "1:500 상세 — 관로 SHP 검증·보완 원천"@ko .
+
+axg:C_101 a ax:Drawing ;
+    rdfs:label "오수관로 계획평면도(8)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "C-101" ;
+    ax:ingestPolicy "SHP 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 109 ;
+    ax:scale "1:500" ;
+    rdfs:comment "1:500 상세 — 관로 SHP 검증·보완 원천"@ko .
+
+axg:C_102 a ax:Drawing ;
+    rdfs:label "오수관로 계획평면도(9)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "C-102" ;
+    ax:ingestPolicy "SHP 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 110 ;
+    ax:scale "1:500" ;
+    rdfs:comment "1:500 상세 — 관로 SHP 검증·보완 원천"@ko .
+
+axg:C_103 a ax:Drawing ;
+    rdfs:label "오수관로 계획평면도(10)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "C-103" ;
+    ax:ingestPolicy "SHP 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 111 ;
+    ax:scale "1:500" ;
+    rdfs:comment "1:500 상세 — 관로 SHP 검증·보완 원천"@ko .
+
+axg:C_104 a ax:Drawing ;
+    rdfs:label "오수관로 계획평면도(11)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "C-104" ;
+    ax:ingestPolicy "SHP 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 112 ;
+    ax:scale "1:500" ;
+    rdfs:comment "1:500 상세 — 관로 SHP 검증·보완 원천"@ko .
+
+axg:C_105 a ax:Drawing ;
+    rdfs:label "오수관로 계획평면도(12)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "C-105" ;
+    ax:ingestPolicy "SHP 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 113 ;
+    ax:scale "1:500" ;
+    rdfs:comment "1:500 상세 — 관로 SHP 검증·보완 원천"@ko .
+
+axg:C_106 a ax:Drawing ;
+    rdfs:label "오수관로 계획평면도(13)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "C-106" ;
+    ax:ingestPolicy "SHP 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 114 ;
+    ax:scale "1:500" ;
+    rdfs:comment "1:500 상세 — 관로 SHP 검증·보완 원천"@ko .
+
+axg:C_107 a ax:Drawing ;
+    rdfs:label "DGS-A-LINE 오수관로 종평면도(1)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-107" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 115 ;
+    ax:scale "H=1:500,V=1:100" .
+
+axg:C_108 a ax:Drawing ;
+    rdfs:label "DGS-A-LINE 오수관로 종평면도(2)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-108" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 116 ;
+    ax:scale "H=1:500,V=1:100" .
+
+axg:C_109 a ax:Drawing ;
+    rdfs:label "DGS-A-LINE 오수관로 종평면도(3)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-109" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 117 ;
+    ax:scale "H=1:500,V=1:100" .
+
+axg:C_110 a ax:Drawing ;
+    rdfs:label "DGS-A-LINE 오수관로 종평면도(4)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-110" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 118 ;
+    ax:scale "H=1:500,V=1:100" .
+
+axg:C_111 a ax:Drawing ;
+    rdfs:label "DGS-A-LINE 오수관로 종평면도(5)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-111" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 119 ;
+    ax:scale "H=1:500,V=1:100" .
+
+axg:C_112 a ax:Drawing ;
+    rdfs:label "DGS-A-LINE 오수관로 종평면도(6)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-112" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 120 ;
+    ax:scale "H=1:500,V=1:100" .
+
+axg:C_113 a ax:Drawing ;
+    rdfs:label "DGS-A-LINE 오수관로 종평면도(7)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-113" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 121 ;
+    ax:scale "H=1:500,V=1:100" .
+
+axg:C_114 a ax:Drawing ;
+    rdfs:label "DGS-A-LINE 오수관로 횡단면도(1)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-114" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 122 ;
+    ax:scale "1:100" .
+
+axg:C_115 a ax:Drawing ;
+    rdfs:label "DGS-A-LINE 오수관로 횡단면도(2)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-115" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 123 ;
+    ax:scale "1:100" .
+
+axg:C_116 a ax:Drawing ;
+    rdfs:label "DGS-A-LINE 오수관로 횡단면도(3)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-116" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 124 ;
+    ax:scale "1:100" .
+
+axg:C_117 a ax:Drawing ;
+    rdfs:label "DGS-A-LINE 오수관로 횡단면도(4)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-117" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 125 ;
+    ax:scale "1:100" .
+
+axg:C_118 a ax:Drawing ;
+    rdfs:label "DGS-A-LINE 오수관로 횡단면도(5)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-118" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 126 ;
+    ax:scale "1:100" .
+
+axg:C_119 a ax:Drawing ;
+    rdfs:label "DGS-A-LINE 오수관로 횡단면도(6)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-119" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 127 ;
+    ax:scale "1:100" .
+
+axg:C_120 a ax:Drawing ;
+    rdfs:label "DGS-A-LINE 오수관로 횡단면도(7)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-120" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 128 ;
+    ax:scale "1:100" .
+
+axg:C_121 a ax:Drawing ;
+    rdfs:label "DGS-B-LINE 오수관로 종평면도"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-121" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 129 ;
+    ax:scale "H=1:500,V=1:100" .
+
+axg:C_122 a ax:Drawing ;
+    rdfs:label "DGS-B-LINE 오수관로 횡단면도(1)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-122" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 130 ;
+    ax:scale "1:100" .
+
+axg:C_123 a ax:Drawing ;
+    rdfs:label "DGS-B-LINE 오수관로 횡단면도(2)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-123" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 131 ;
+    ax:scale "1:100" .
+
+axg:C_124 a ax:Drawing ;
+    rdfs:label "GSS-C-LINE 오수관로 종평면도(1)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-124" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 132 ;
+    ax:scale "H=1:500,V=1:100" .
+
+axg:C_125 a ax:Drawing ;
+    rdfs:label "GSS-C-LINE 오수관로 종평면도(2)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-125" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 133 ;
+    ax:scale "H=1:500,V=1:100" .
+
+axg:C_126 a ax:Drawing ;
+    rdfs:label "GSS-C-LINE 오수관로 종평면도(3)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-126" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 134 ;
+    ax:scale "H=1:500,V=1:100" .
+
+axg:C_127 a ax:Drawing ;
+    rdfs:label "GSS-C-LINE 오수관로 종평면도(4)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-127" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 135 ;
+    ax:scale "H=1:500,V=1:100" .
+
+axg:C_128 a ax:Drawing ;
+    rdfs:label "GSS-C-LINE 오수관로 횡단면도(1)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-128" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 136 ;
+    ax:scale "1:100" .
+
+axg:C_129 a ax:Drawing ;
+    rdfs:label "GSS-C-LINE 오수관로 횡단면도(2)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-129" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 137 ;
+    ax:scale "1:100" .
+
+axg:C_130 a ax:Drawing ;
+    rdfs:label "GSS-C-LINE 오수관로 횡단면도(3)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-130" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 138 ;
+    ax:scale "1:100" .
+
+axg:C_131 a ax:Drawing ;
+    rdfs:label "GSS-C-LINE 오수관로 횡단면도(4)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-131" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    ax:scale "1:100" ;
+    rdfs:comment "목차에는 있으나 PDF 실물 누락 — 원본 확인 필요"@ko .
+
+axg:C_132 a ax:Drawing ;
+    rdfs:label "오수관로 포장 계획평면도(1)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-132" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 139 ;
+    ax:scale "1:500" .
+
+axg:C_133 a ax:Drawing ;
+    rdfs:label "오수관로 포장 계획평면도(2)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-133" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 140 ;
+    ax:scale "1:500" .
+
+axg:C_134 a ax:Drawing ;
+    rdfs:label "오수관로 포장 계획평면도(3)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-134" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 141 ;
+    ax:scale "1:500" .
+
+axg:C_135 a ax:Drawing ;
+    rdfs:label "이토밸브실 상세도"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-135" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 142 ;
+    ax:scale "NONE" .
+
+axg:C_136 a ax:Drawing ;
+    rdfs:label "공기밸브실 상세도(1)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-136" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 143 ;
+    ax:scale "NONE" .
+
+axg:C_137 a ax:Drawing ;
+    rdfs:label "공기밸브실 상세도(2)"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-137" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 144 ;
+    ax:scale "NONE" .
+
+axg:C_138 a ax:Drawing ;
+    rdfs:label "제수밸브실 상세도"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-138" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 145 ;
+    ax:scale "NONE" .
+
+axg:C_139 a ax:Drawing ;
+    rdfs:label "관매달기 상세도"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-139" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 146 ;
+    ax:scale "NONE" .
+
+axg:C_140 a ax:Drawing ;
+    rdfs:label "기존관로 연결 평면도"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-140" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 147 ;
+    ax:scale "1:100" .
+
+axg:C_141 a ax:Drawing ;
+    rdfs:label "격점 상세도"@ko ;
+    ax:discipline "토목·하수관로" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-141" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 148 ;
+    ax:scale "NONE" .
+
+axg:C_142 a ax:Drawing ;
+    rdfs:label "기존 중계펌프장 개량 상세도(1)"@ko ;
+    ax:discipline "토목·중계펌프장" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-142" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 152 ;
+    ax:scale "1:60" ;
+    rdfs:comment "실물 제본 순서 C-143→144→142 (p150~152)"@ko .
+
+axg:C_143 a ax:Drawing ;
+    rdfs:label "기존 중계펌프장 개량 상세도(2)"@ko ;
+    ax:discipline "토목·중계펌프장" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-143" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 150 ;
+    ax:scale "1:60" .
+
+axg:C_144 a ax:Drawing ;
+    rdfs:label "기존 중계펌프장 개량 상세도(3)"@ko ;
+    ax:discipline "토목·중계펌프장" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-144" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 151 ;
+    ax:scale "1:60" .
+
+axg:C_145 a ax:Drawing ;
+    rdfs:label "포장깨기 및 복구 상세도"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-145" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_146 a ax:Drawing ;
+    rdfs:label "터파기 상세도(1)"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-146" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_147 a ax:Drawing ;
+    rdfs:label "터파기 상세도(2)"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-147" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_148 a ax:Drawing ;
+    rdfs:label "조립식 PC맨홀 상세도"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-148" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_149 a ax:Drawing ;
+    rdfs:label "닥타일 주철관 상세도"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-149" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_150 a ax:Drawing ;
+    rdfs:label "PVC 이중벽관 상세도"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-150" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_151 a ax:Drawing ;
+    rdfs:label "흄관 상세도"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-151" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_152 a ax:Drawing ;
+    rdfs:label "이형관 보호공 상세도(1)"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-152" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_153 a ax:Drawing ;
+    rdfs:label "이형관 보호공 상세도(2)"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-153" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_154 a ax:Drawing ;
+    rdfs:label "관로구간 가시설"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-154" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_155 a ax:Drawing ;
+    rdfs:label "카스토퍼 상세도"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-155" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_156 a ax:Drawing ;
+    rdfs:label "맨홀뚜껑 상세도"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-156" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_157 a ax:Drawing ;
+    rdfs:label "지장물 매달기 상세도(1)"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-157" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_158 a ax:Drawing ;
+    rdfs:label "지장물 매달기 상세도(2)"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-158" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_159 a ax:Drawing ;
+    rdfs:label "교통처리 계획도"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-159" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_160 a ax:Drawing ;
+    rdfs:label "공사용 안전시설 상세도"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-160" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_161 a ax:Drawing ;
+    rdfs:label "시공 순서도"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-161" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_162 a ax:Drawing ;
+    rdfs:label "세륜세차시설 상세도"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-162" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_163 a ax:Drawing ;
+    rdfs:label "플랩 밸브 상세도"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-163" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_164 a ax:Drawing ;
+    rdfs:label "돌망태 상세도"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-164" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_165 a ax:Drawing ;
+    rdfs:label "날개벽 상세도(1)"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-165" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_166 a ax:Drawing ;
+    rdfs:label "날개벽 상세도(2)"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-166" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_167 a ax:Drawing ;
+    rdfs:label "제수변키 보호통 상세도"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-167" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_168 a ax:Drawing ;
+    rdfs:label "내충격 PVC 오수받이 상세도"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-168" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_169 a ax:Drawing ;
+    rdfs:label "내충격 PVC 점검구 상세도"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-169" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_170 a ax:Drawing ;
+    rdfs:label "각종 상세도(1)"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-170" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_171 a ax:Drawing ;
+    rdfs:label "각종 상세도(2)"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-171" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_172 a ax:Drawing ;
+    rdfs:label "각종 상세도(3)"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-172" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_173 a ax:Drawing ;
+    rdfs:label "각종 상세도(4)"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-173" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_174 a ax:Drawing ;
+    rdfs:label "시공 상세도(1)"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-174" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_175 a ax:Drawing ;
+    rdfs:label "시공 상세도(2)"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-175" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_176 a ax:Drawing ;
+    rdfs:label "시공 상세도(3)"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-176" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:C_177 a ax:Drawing ;
+    rdfs:label "비점오염저감시설 상세도"@ko ;
+    ax:discipline "토목·공통(관로부대)" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "C-177" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    rdfs:comment "이 PDF에 미수록 — 원본/별권 확인"@ko .
+
+axg:G_001 a ax:Drawing ;
+    rdfs:label "위치도"@ko ;
+    ax:discipline "공통" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "G-001" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 5 ;
+    ax:scale "1:20,000" .
+
+axg:LA_000 a ax:Drawing ;
+    rdfs:label "도면목차"@ko ;
+    ax:discipline "조경" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "LA-000" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "미수록" ;
+    ax:scale "NONE" ;
+    rdfs:comment "이 PDF에 미수록"@ko .
+
+axg:LA_001 a ax:Drawing ;
+    rdfs:label "조경녹지구적도"@ko ;
+    ax:discipline "조경" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "LA-001" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 291 ;
+    ax:scale "1:400" .
+
+axg:LA_002 a ax:Drawing ;
+    rdfs:label "조경식재계획도"@ko ;
+    ax:discipline "조경" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "LA-002" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 292 ;
+    ax:scale "1:400" .
+
+axg:LA_003 a ax:Drawing ;
+    rdfs:label "조경시설 및 포장계획도"@ko ;
+    ax:discipline "조경" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "LA-003" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 293 ;
+    ax:scale "1:400" .
+
+axg:LA_004 a ax:Drawing ;
+    rdfs:label "포장단면 상세도"@ko ;
+    ax:discipline "조경" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "LA-004" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 294 ;
+    ax:scale "1:20" .
+
+axg:LA_005 a ax:Drawing ;
+    rdfs:label "식재부대 상세도"@ko ;
+    ax:discipline "조경" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "LA-005" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 295 ;
+    ax:scale "NONE" .
+
+axg:LA_006 a ax:Drawing ;
+    rdfs:label "등의자 상세도"@ko ;
+    ax:discipline "조경" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "LA-006" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 296 .
+
+axg:LA_007 a ax:Drawing ;
+    rdfs:label "파고라 상세도"@ko ;
+    ax:discipline "조경" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "LA-007" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 297 .
+
+axg:LA_008 a ax:Drawing ;
+    rdfs:label "체력단련시설A 상세도"@ko ;
+    ax:discipline "조경" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "LA-008" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 298 .
+
+axg:LA_009 a ax:Drawing ;
+    rdfs:label "체력단련시설B 상세도"@ko ;
+    ax:discipline "조경" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "LA-009" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 299 .
+
+axg:LA_010 a ax:Drawing ;
+    rdfs:label "체력단련시설C 상세도"@ko ;
+    ax:discipline "조경" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "LA-010" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 300 .
+
+axg:LA_011 a ax:Drawing ;
+    rdfs:label "체력단련시설D 상세도"@ko ;
+    ax:discipline "조경" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "LA-011" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 301 .
+
+axg:MP_001 a ax:Drawing ;
+    rdfs:label "일반사항 및 주의사항"@ko ;
+    ax:discipline "기계·중계펌프장" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "MP-001" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 282 ;
+    ax:scale "NONE" .
+
+axg:MP_002 a ax:Drawing ;
+    rdfs:label "범례"@ko ;
+    ax:discipline "기계·중계펌프장" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "MP-002" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 283 ;
+    ax:scale "NONE" .
+
+axg:MP_003 a ax:Drawing ;
+    rdfs:label "전체계획 평면도"@ko ;
+    ax:discipline "기계·중계펌프장" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "MP-003" ;
+    ax:ingestPolicy "SHP 편입" ;
+    ax:ingestStatus "편입완료" ;
+    ax:pdfPage 284 ;
+    ax:scale "1:4,000" ;
+    rdfs:comment "오수관로 SHP(자연유하 3,568/압송 268) 추출 완료 — 유하/압송 구분 검증 필요"@ko .
+
+axg:MP_004 a ax:Drawing ;
+    rdfs:label "기기목록"@ko ;
+    ax:discipline "기계·중계펌프장" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "MP-004" ;
+    ax:ingestPolicy "그래프 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 285 ;
+    ax:scale "NONE" .
+
+axg:MP_005 a ax:Drawing ;
+    rdfs:label "처리계통도"@ko ;
+    ax:discipline "기계·중계펌프장" ;
+    ax:drawingKind "스키매틱" ;
+    ax:drawingNo "MP-005" ;
+    ax:ingestPolicy "그래프 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 286 ;
+    ax:scale "NONE" ;
+    rdfs:comment "중계펌프장 계통 — 편입 후보"@ko .
+
+axg:MP_006 a ax:Drawing ;
+    rdfs:label "도곡 중계펌프장 평면도"@ko ;
+    ax:discipline "기계·중계펌프장" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "MP-006" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 287 ;
+    ax:scale "1:60" ;
+    rdfs:comment "펌프장 위치점 확보 원천 후보"@ko .
+
+axg:MP_007 a ax:Drawing ;
+    rdfs:label "도곡 중계펌프장 단면도"@ko ;
+    ax:discipline "기계·중계펌프장" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "MP-007" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 288 ;
+    ax:scale "1:40" .
+
+axg:MP_008 a ax:Drawing ;
+    rdfs:label "국수 중계펌프장 평면도"@ko ;
+    ax:discipline "기계·중계펌프장" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "MP-008" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 289 ;
+    ax:scale "1:60" ;
+    rdfs:comment "펌프장 위치점 확보 원천 후보"@ko .
+
+axg:MP_009 a ax:Drawing ;
+    rdfs:label "국수 중계펌프장 단면도"@ko ;
+    ax:discipline "기계·중계펌프장" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "MP-009" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 290 ;
+    ax:scale "1:40" .
+
+axg:M_001 a ax:Drawing ;
+    rdfs:label "일반사항 및 주의사항"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-001" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 249 ;
+    ax:scale "NONE" .
+
+axg:M_002 a ax:Drawing ;
+    rdfs:label "범례"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-002" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 250 ;
+    ax:scale "NONE" ;
+    rdfs:comment "태그 범례 — 그래프 편입 시 파싱 사전으로 활용"@ko .
+
+axg:M_003 a ax:Drawing ;
+    rdfs:label "전체계획 평면도"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "M-003" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 251 ;
+    ax:scale "1:300" .
+
+axg:M_004 a ax:Drawing ;
+    rdfs:label "기기목록(1)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-004" ;
+    ax:ingestPolicy "그래프 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 252 ;
+    ax:scale "NONE" ;
+    rdfs:comment "장비 마스터 — Asset A-Box 원천 후보"@ko .
+
+axg:M_005 a ax:Drawing ;
+    rdfs:label "기기목록(2)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-005" ;
+    ax:ingestPolicy "그래프 편입" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 253 ;
+    ax:scale "NONE" ;
+    rdfs:comment "장비 마스터 — Asset A-Box 원천 후보"@ko .
+
+axg:M_006 a ax:Drawing ;
+    rdfs:label "처리계통도(1)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:documents axs:SYS_PRETREAT ;
+    ax:drawingKind "스키매틱" ;
+    ax:drawingNo "M-006" ;
+    ax:ingestPolicy "그래프 편입" ;
+    ax:ingestStatus "대기",
+        "편입완료" ;
+    ax:pdfPage 254 ;
+    ax:scale "NONE" ;
+    rdfs:comment "생물반응조 계통 포함 — DO 루프 원천"@ko .
+
+axg:M_008 a ax:Drawing ;
+    rdfs:label "처리계통도(3)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:documents axs:SYS_IPR,
+        axs:SYS_UTILITY ;
+    ax:drawingKind "스키매틱" ;
+    ax:drawingNo "M-008" ;
+    ax:ingestPolicy "그래프 편입" ;
+    ax:ingestStatus "대기",
+        "편입완료" ;
+    ax:pdfPage 256 ;
+    ax:scale "NONE" ;
+    rdfs:comment "생물반응조 계통 포함 — DO 루프 원천"@ko .
+
+axg:M_009 a ax:Drawing ;
+    rdfs:label "처리계통도(4)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:documents axs:SYS_BIO ;
+    ax:drawingKind "스키매틱" ;
+    ax:drawingNo "M-009" ;
+    ax:ingestPolicy "그래프 편입" ;
+    ax:ingestStatus "대기",
+        "편입완료" ;
+    ax:pdfPage 257 ;
+    ax:scale "NONE" ;
+    rdfs:comment "생물반응조 계통 포함 — DO 루프 원천"@ko .
+
+axg:M_010 a ax:Drawing ;
+    rdfs:label "처리계통도(5)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:documents axs:SYS_DEWATER ;
+    ax:drawingKind "스키매틱" ;
+    ax:drawingNo "M-010" ;
+    ax:ingestPolicy "그래프 편입" ;
+    ax:ingestStatus "대기",
+        "편입완료" ;
+    ax:pdfPage 258 ;
+    ax:scale "NONE" ;
+    rdfs:comment "생물반응조 계통 포함 — DO 루프 원천"@ko .
+
+axg:M_011 a ax:Drawing ;
+    rdfs:label "처리계통도(6)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:documents axs:SYS_DEODOR ;
+    ax:drawingKind "스키매틱" ;
+    ax:drawingNo "M-011" ;
+    ax:ingestPolicy "그래프 편입" ;
+    ax:ingestStatus "대기",
+        "편입완료" ;
+    ax:pdfPage 259 ;
+    ax:scale "NONE" ;
+    rdfs:comment "생물반응조 계통 포함 — DO 루프 원천"@ko,
+        "탈취 태그 M-601/M-601-1이 기기목록 '바.탈취설비'와 일치. 파일럿v1·v2의 M-509/510 판정은 폐기됨."@ko .
+
+axg:M_012 a ax:Drawing ;
+    rdfs:label "기계 배치 평면도(상부)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "M-012" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 260 ;
+    ax:scale "1:100" .
+
+axg:M_013 a ax:Drawing ;
+    rdfs:label "기계 배치 평면도(중간부)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "M-013" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 261 ;
+    ax:scale "1:100" .
+
+axg:M_014 a ax:Drawing ;
+    rdfs:label "기계 배치 평면도(하부)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "M-014" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 262 ;
+    ax:scale "1:100" .
+
+axg:M_015 a ax:Drawing ;
+    rdfs:label "기계 배치 단면도(1)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-015" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 263 ;
+    ax:scale "1:60" .
+
+axg:M_016 a ax:Drawing ;
+    rdfs:label "기계 배치 단면도(2)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-016" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 264 ;
+    ax:scale "1:60" .
+
+axg:M_017 a ax:Drawing ;
+    rdfs:label "기계 배치 단면도(3)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-017" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 265 ;
+    ax:scale "1:60" .
+
+axg:M_018 a ax:Drawing ;
+    rdfs:label "기계 배치 단면도(4)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-018" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 266 ;
+    ax:scale "1:60" .
+
+axg:M_019 a ax:Drawing ;
+    rdfs:label "기계 배치 단면도(5)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-019" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 267 ;
+    ax:scale "1:60" .
+
+axg:M_020 a ax:Drawing ;
+    rdfs:label "기계 배치 단면도(6)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-020" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 268 ;
+    ax:scale "1:60" .
+
+axg:M_021 a ax:Drawing ;
+    rdfs:label "기계 배치 단면도(7)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-021" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 269 ;
+    ax:scale "1:60" .
+
+axg:M_022 a ax:Drawing ;
+    rdfs:label "기계 배치 단면도(8)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-022" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 270 ;
+    ax:scale "1:60" .
+
+axg:M_023 a ax:Drawing ;
+    rdfs:label "기계 배치 상세 평면도(1)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-023" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 271 ;
+    ax:scale "1:60" .
+
+axg:M_024 a ax:Drawing ;
+    rdfs:label "기계 배치 상세 평면도(2)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-024" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 272 ;
+    ax:scale "1:60" .
+
+axg:M_025 a ax:Drawing ;
+    rdfs:label "기계 배치 상세 평면도(3)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-025" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 273 ;
+    ax:scale "1:60" .
+
+axg:M_026 a ax:Drawing ;
+    rdfs:label "기계 배치 상세 평면도(4)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-026" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 274 ;
+    ax:scale "1:40" .
+
+axg:M_027 a ax:Drawing ;
+    rdfs:label "탈취배관 평면도(1)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-027" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 275 ;
+    ax:scale "1:50" .
+
+axg:M_028 a ax:Drawing ;
+    rdfs:label "탈취배관 평면도(1)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-028" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 276 ;
+    ax:scale "1:60" .
+
+axg:M_029 a ax:Drawing ;
+    rdfs:label "탈취배관 평면도(2)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-029" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 277 ;
+    ax:scale "1:60" .
+
+axg:M_030 a ax:Drawing ;
+    rdfs:label "배관 지지대 상세도(1)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-030" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 278 ;
+    ax:scale "NONE" .
+
+axg:M_031 a ax:Drawing ;
+    rdfs:label "배관 지지대 상세도(2)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-031" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 279 ;
+    ax:scale "NONE" .
+
+axg:M_032 a ax:Drawing ;
+    rdfs:label "탈취배관 지지대 상세도"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:drawingKind "참조도면" ;
+    ax:drawingNo "M-032" ;
+    ax:ingestPolicy "PDF 참조" ;
+    ax:ingestStatus "대기" ;
+    ax:pdfPage 280 ;
+    ax:scale "NONE" .
+
+axf:GuksuPlant a ax:Facility ;
+    rdfs:label "국수 공공하수처리시설"@ko ;
+    ax:coordSource "C-002" ;
+    ax:documentedBy axg:C_002 ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POLYGON((235323.8 545797.4, 235427.4 545797.4, 235427.4 545851.4, 235323.8 545851.4, 235323.8 545797.4))"^^geo:wktLiteral .
+
+axp:DGS_B_001 a ax:PipeStation ;
+    rdfs:label "DGS-B-001" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234751.92 545652.29)"^^geo:wktLiteral .
+
+axp:DGS_B_002 a ax:PipeStation ;
+    rdfs:label "DGS-B-002" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234718.63 545672.42)"^^geo:wktLiteral .
+
+axp:DGS_B_003 a ax:PipeStation ;
+    rdfs:label "DGS-B-003" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234707.73 545694.20)"^^geo:wktLiteral .
+
+axp:DGS_B_004 a ax:PipeStation ;
+    rdfs:label "DGS-B-004" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234703.91 545713.24)"^^geo:wktLiteral .
+
+axp:DGS_B_005 a ax:PipeStation ;
+    rdfs:label "DGS-B-005" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234683.08 545729.43)"^^geo:wktLiteral .
+
+axp:DGS_B_006 a ax:PipeStation ;
+    rdfs:label "DGS-B-006" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234685.77 545746.62)"^^geo:wktLiteral .
+
+axp:DGS_B_007 a ax:PipeStation ;
+    rdfs:label "DGS-B-007" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234687.60 545789.12)"^^geo:wktLiteral .
+
+axp:MH_001 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(235374.23 546000.54)"^^geo:wktLiteral .
+
+axp:MH_002 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234774.70 545636.64)"^^geo:wktLiteral .
+
+axp:MH_003 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234737.46 545660.50)"^^geo:wktLiteral .
+
+axp:MH_004 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234707.92 545677.62)"^^geo:wktLiteral .
+
+axp:MH_005 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234707.27 545697.77)"^^geo:wktLiteral .
+
+axp:MH_006 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234702.15 545715.30)"^^geo:wktLiteral .
+
+axp:MH_007 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234677.32 545732.20)"^^geo:wktLiteral .
+
+axp:MH_008 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(235411.26 546007.00)"^^geo:wktLiteral .
+
+axp:MH_009 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(235374.23 546000.54)"^^geo:wktLiteral .
+
+axp:MH_010 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(235334.26 545998.93)"^^geo:wktLiteral .
+
+axp:MH_011 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(235262.65 546006.46)"^^geo:wktLiteral .
+
+axp:MH_012 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(235236.91 546002.79)"^^geo:wktLiteral .
+
+axp:MH_013 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(235200.77 545985.65)"^^geo:wktLiteral .
+
+axp:MH_014 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(235139.49 545951.83)"^^geo:wktLiteral .
+
+axp:MH_015 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(235078.20 545918.00)"^^geo:wktLiteral .
+
+axp:MH_016 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(235028.30 545900.15)"^^geo:wktLiteral .
+
+axp:MH_017 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234967.52 545887.90)"^^geo:wktLiteral .
+
+axp:MH_018 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234907.68 545883.55)"^^geo:wktLiteral .
+
+axp:MH_019 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234847.84 545879.20)"^^geo:wktLiteral .
+
+axp:MH_020 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234787.99 545874.85)"^^geo:wktLiteral .
+
+axp:MH_021 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234746.99 545865.75)"^^geo:wktLiteral .
+
+axp:MH_022 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234709.10 545847.64)"^^geo:wktLiteral .
+
+axp:MH_023 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234682.70 545826.20)"^^geo:wktLiteral .
+
+axp:MH_024 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234661.01 545804.77)"^^geo:wktLiteral .
+
+axp:MH_025 a ax:Manhole ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(234681.11 545791.99)"^^geo:wktLiteral .
+
+axp:PS_Dogok a ax:Facility ;
+    rdfs:label "도곡중계펌프장"@ko ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(233724.9 546202.7)"^^geo:wktLiteral ;
+    rdfs:comment "상세도면 MP-006/007. 위치점은 관로원본에서 확정."@ko .
+
+axp:PS_Gooksu a ax:Facility ;
+    rdfs:label "국수중계펌프장"@ko ;
+    ax:coordSource "관로DXF" ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/5186> POINT(235285.4 546072.8)"^^geo:wktLiteral ;
+    rdfs:comment "상세도면 MP-008/009. 위치점은 관로원본에서 확정."@ko .
+
+ax:coordStatus a rdfs:Datatype .
+
+ax:discipline a rdfs:Datatype ;
+    rdfs:comment "분야" .
+
+ax:documents a rdfs:Property ;
+    rdfs:comment "도면 → 시설/공정/장비" .
+
+ax:drawingKind a rdfs:Datatype ;
+    rdfs:comment "성격: 스키매틱/좌표도면/참조도면" .
+
+ax:drawingNo a rdfs:Datatype ;
+    rdfs:comment "도면번호 (유일키)" .
+
+ax:dxfVerified a rdfs:Datatype ;
+    rdfs:comment "DXF 실도면에서 태그 확인됨" .
+
+ax:ingestPolicy a rdfs:Datatype ;
+    rdfs:comment "처리: 그래프 편입/SHP 편입/PDF 참조" .
+
+ax:ingestStatus a rdfs:Datatype ;
+    rdfs:comment "상태: 편입완료/대기/미수록" .
+
+ax:localXY a rdfs:Datatype ;
+    rdfs:comment "도면 로컬좌표 X,Y (실좌표 아님)" .
+
+ax:pdfPage a rdfs:Datatype ;
+    rdfs:comment "합본 PDF 페이지 (도면_토목_건축_기계_조경, 301p)" .
+
+ax:powerKW a rdfs:Datatype ;
+    rdfs:comment "정격동력 kW" .
+
+ax:quantity a rdfs:Datatype ;
+    rdfs:comment "수량" .
+
+ax:spec a rdfs:Datatype ;
+    rdfs:comment "형식·규격" .
+
+axa:M_110 a ax:Asset ;
+    rdfs:label "드럼스크린"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axa:M_111 ;
+    ax:hasTag "M-110 A~C" ;
+    ax:localXY "428691.9,-72622.2" ;
+    ax:partOf axs:SYS_PRETREAT ;
+    ax:readConfidence "high",
+        "med" ;
+    ax:spec "드럼형 메쉬 스크린, 목간격1, 용량60㎥/h"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235363.36 545831.10)" ;
+    rdfs:comment "드럼스크린→협잡물이송컨베이어"@ko .
+
+axa:M_111 a ax:Asset ;
+    rdfs:label "협잡물 이송 컨베이어(1)"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axa:M_114 ;
+    ax:hasTag "M-111" ;
+    ax:localXY "423631.5,-72100.1" ;
+    ax:partOf axs:SYS_PRETREAT ;
+    ax:powerKW "3.2" ;
+    ax:readConfidence "med" ;
+    ax:spec "무주축 스크류 컨베이어(경사형), Ø250mm×L5.5m"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235363.88 545836.16)" ;
+    rdfs:comment "이송→저장콘테이너"@ko .
+
+axa:M_114 a ax:Asset ;
+    rdfs:label "협잡물및침사물저장 콘테이너"@ko ;
+    ax:coordSource "DXF:M-012" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-114" ;
+    ax:localXY "353604.8,-75748.9" ;
+    ax:partOf axs:SYS_PRETREAT ;
+    ax:readConfidence "med" ;
+    ax:spec "스테인레스 강판제(이동식), 3㎥"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235360.23 545822.09)" .
+
+axa:M_215 a ax:Asset ;
+    rdfs:label "NaOCl 원액이송펌프"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axa:M_216 ;
+    ax:hasTag "M-215 A~C" ;
+    ax:localXY "443051.3,-57886.0" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:quantity "1" ;
+    ax:readConfidence "high" ;
+    ax:spec "무맥동형 다이아프램식 정량펌프 VVVF, 210mL/min×10kg/㎠(0.98MPa)"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235378.09 545816.74)" ;
+    rdfs:comment "원액이송→희석탱크"@ko .
+
+axa:M_216 a ax:Asset ;
+    rdfs:label "NaOCl 희석탱크"@ko ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-216 A,B" ;
+    ax:localXY "434290.7,-59809.1" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:powerKW "0.75" ;
+    ax:quantity "2식" ;
+    ax:readConfidence "high" ;
+    ax:spec "PE 원통형 탱크, 교반기 포함, 1,000L"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235376.17 545825.50)" .
+
+axa:M_218 a ax:Asset ;
+    rdfs:label "NaOH 주입펌프"@ko ;
+    ax:conveys "NaOH" ;
+    ax:coordSource "DXF:M-013" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axg:M_007 ;
+    ax:hasTag "M-218 A~C" ;
+    ax:localXY "445095.7,-56998.3" ;
+    ax:medium "chem" ;
+    ax:partOf axs:SYS_BIO ;
+    ax:quantity "1" ;
+    ax:readConfidence "high" ;
+    ax:spec "무맥동형 다이아프램식 정량펌프 VVVF, 50mL/min×10kg/㎠(0.98MPa)"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235378.98 545814.69)" ;
+    rdfs:comment "NaOH 주입 → 처리계통도(2). 배관 20A-NaOH-PE 확인"@ko .
+
+axa:M_302 a ax:Asset ;
+    rdfs:label "총인처리시설"@ko ;
+    ax:coordSource "DXF:M-012" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-302" ;
+    ax:localXY "352234.4,-61262.9" ;
+    ax:partOf axs:SYS_IPR ;
+    ax:quantity "1식" ;
+    ax:readConfidence "high" ;
+    ax:spec "총인처리시설(IPR), 2,400㎥/일"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235374.72 545823.46)" ;
+    rdfs:comment "공법 기자재. 패키지"@ko .
+
+axa:M_302_3 a ax:Asset ;
+    rdfs:label "약품공급 펌프"@ko ;
+    ax:conveys "응집약품" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axa:M_302_1 ;
+    ax:hasTag "M-302-3" ;
+    ax:medium "chem" ;
+    ax:partOf axs:SYS_IPR ;
+    ax:powerKW "0.55" ;
+    ax:quantity "2" ;
+    ax:readConfidence "high" ;
+    ax:spec "무맥동형 다이아프램식 정량펌프(BLDC Type), 120mL/min×10kg/㎠(0.98MPa)"@ko ;
+    ax:tagStatus "verified" .
+
+axa:M_503 a ax:Asset ;
+    rdfs:label "케익이송 컨베이어"@ko ;
+    ax:coordSource "DXF:M-012" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axa:M_504 ;
+    ax:hasTag "M-503" ;
+    ax:localXY "355530.6,-71399.4" ;
+    ax:partOf axs:SYS_DEWATER ;
+    ax:readConfidence "high" ;
+    ax:spec "무주축 스크류 컨베이어(경사형), Ø250mm×L8.5m"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235364.58 545820.16)" ;
+    rdfs:comment "사용자 정정"@ko,
+        "케익이송→케익저장콘테이너"@ko .
+
+axa:M_504 a ax:Asset ;
+    rdfs:label "케익저장 콘테이너"@ko ;
+    ax:coordSource "DXF:M-012" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-504" ;
+    ax:localXY "357555.1,-76699.5" ;
+    ax:partOf axs:SYS_DEWATER ;
+    ax:quantity "1" ;
+    ax:readConfidence "med" ;
+    ax:spec "암롤박스, 8㎥"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235359.28 545818.13)" .
+
+axa:M_505 a ax:Asset ;
+    rdfs:label "슬러지저류조 산기장치"@ko ;
+    ax:coordSource "DXF:M-014" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-505 A,B" ;
+    ax:localXY "540677.6,-72004.3" ;
+    ax:partOf axs:SYS_DEWATER ;
+    ax:readConfidence "med" ;
+    ax:spec "고정식, 파이프형 산기장치, 65A, 40A"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235363.98 545803.71)" .
+
+axa:M_508 a ax:Asset ;
+    rdfs:label "폴리머 공급펌프"@ko ;
+    ax:conveys "폴리머" ;
+    ax:coordSource "DXF:M-012" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axa:M_501 ;
+    ax:hasTag "M-508 A~C" ;
+    ax:localXY "354839.0,-64653.1" ;
+    ax:medium "chem" ;
+    ax:partOf axs:SYS_DEWATER ;
+    ax:readConfidence "high" ;
+    ax:spec "무맥동형 다이아프램식 정량펌프 VVVF, 3.4L/min×5kg/㎠(0.49MPa)"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235371.33 545820.85)" ;
+    rdfs:comment "사용자 정정"@ko,
+        "폴리머 주입 → 탈수기(응집)"@ko .
+
+axa:M_601_1 a ax:Asset ;
+    rdfs:label "탈취팬"@ko ;
+    ax:coordSource "DXF:M-012" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-601-1" ;
+    ax:localXY "358909.2,-71298.2" ;
+    ax:partOf axs:SYS_DEODOR ;
+    ax:powerKW "1.5" ;
+    ax:quantity "1" ;
+    ax:readConfidence "high" ;
+    ax:spec "터보팬, 130㎥/분×350mmAq"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235364.68 545816.78)" ;
+    rdfs:comment "기기목록 확정. M-011 계통도 일치"@ko .
+
+axg:C_002 a ax:Drawing ;
+    rdfs:label "시설 계획평면도"@ko ;
+    ax:discipline "토목·하수처리시설" ;
+    ax:drawingKind "좌표도면" ;
+    ax:drawingNo "C-002" ;
+    ax:ingestPolicy "SHP 편입" ;
+    ax:ingestStatus "대기",
+        "편입완료" ;
+    ax:pdfPage 9 ;
+    ax:scale "1:300" ;
+    rdfs:comment "footprint 보완·검증용(건축배치도와 교차)"@ko,
+        "시설 footprint SHP 추출완료(88,760 피처, 104×54m). 배경 지형·조경 제외."@ko .
+
+axa:M_302_1 a ax:Asset ;
+    rdfs:label "상향류식 인제거 여과·흡착장치"@ko ;
+    ax:dxfVerified "true" ;
+    ax:hasTag "M-302-1" ;
+    ax:partOf axs:SYS_IPR ;
+    ax:quantity "3" ;
+    ax:readConfidence "high" ;
+    ax:spec "수직원통형 FRP 구조물, 2.4m×4.8mH"@ko ;
+    ax:tagStatus "verified" ;
+    rdfs:comment "← M-007 판독 '인제거 여과·흡착장치'"@ko .
+
+axa:M_501 a ax:Asset ;
+    rdfs:label "슬러지 탈수기"@ko ;
+    ax:coordSource "DXF:M-012" ;
+    ax:coordStatus "georeferenced" ;
+    ax:dxfVerified "true" ;
+    ax:feeds axa:M_503 ;
+    ax:hasTag "M-501 A,B" ;
+    ax:localXY "356401.8,-69280.7" ;
+    ax:partOf axs:SYS_DEWATER ;
+    ax:powerKW "7.5" ;
+    ax:readConfidence "high",
+        "med" ;
+    ax:spec "원심 탈수기, 2.0㎥/h"@ko ;
+    ax:tagStatus "verified" ;
+    geo:asWKT "POINT(235366.70 545819.29)" ;
+    rdfs:comment "탈수기→케익이송컨베이어"@ko .
+
+axs:SYS_UTILITY a ax:Process ;
+    rdfs:label "용수공급"@ko .
+
+axg:M_007 a ax:Drawing ;
+    rdfs:label "처리계통도(2)"@ko ;
+    ax:discipline "기계·하수처리시설" ;
+    ax:documents axs:SYS_IPR ;
+    ax:drawingKind "스키매틱" ;
+    ax:drawingNo "M-007" ;
+    ax:ingestPolicy "그래프 편입" ;
+    ax:ingestStatus "대기",
+        "편입완료" ;
+    ax:pdfPage 255 ;
+    ax:scale "NONE" ;
+    rdfs:comment "도면 상단에 탈취 배관 표기 있으나, 탈취설비 실태그(M-509/510)는 슬러지탈수설비 계통 소속. M-007 표기는 배관 연결참조로 간주 — 탈취 계통 전체는 슬러지동 계통도에서 편입 예정."@ko,
+        "생물반응조 계통 포함 — DO 루프 원천"@ko .
+
+axs:SYS_DEODOR a ax:Process ;
+    rdfs:label "탈취설비"@ko .
+
+axs:SYS_DEWATER a ax:Process ;
+    rdfs:label "슬러지탈수"@ko .
+
+axs:SYS_IPR a ax:Process ;
+    rdfs:label "총인처리(IPR)"@ko .
+
+axs:SYS_PRETREAT a ax:Process ;
+    rdfs:label "침사·유량조정조"@ko .
+
+axs:SYS_BIO a ax:Process ;
+    rdfs:label "생물반응조"@ko .
+

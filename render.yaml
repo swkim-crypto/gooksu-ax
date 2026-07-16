@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: gooksu-ax
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --preload
+    envVars:
+      - key: KAKAO_JS_KEY      # 카카오 JavaScript 키 (없으면 OSM 폴백)
+        sync: false
+      - key: ANTHROPIC_API_KEY  # LLM 폴백용 (없으면 템플릿만)
+        sync: false
