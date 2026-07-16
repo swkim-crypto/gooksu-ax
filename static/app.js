@@ -11,8 +11,10 @@ const STYLE = {
   pumpstations: { radius: 8, color: "#1b5e20", fillColor: "#4caf50", fillOpacity: 0.95, weight: 2 },
   equipment: { radius: 5, color: "#4a148c", fillColor: "#ab47bc", fillOpacity: 0.9, weight: 1 },
   facility: f => f.properties.geom === "polygon"
-    ? { color: "#e65100", fillColor: "#ffcc80", fillOpacity: 0.55, weight: 1 }
-    : { color: "#9e9e9e", weight: 0.8 },
+    ? { color: "#e65100", fillColor: "#ffcc80", fillOpacity: 0.45, weight: 1 }
+    : f.properties.geom === "label"
+    ? { radius: 4, color: "#37474f", fillColor: "#eceff1", fillOpacity: 0.95, weight: 1.5 }
+    : { color: "#8d6e63", weight: 1 },
 };
 const SWATCH = { pipes: "#1f77b4", manholes: "#ffb300", pumpstations: "#4caf50", facility: "#ffcc80", equipment: "#ab47bc" };
 const DOT_PX = { manholes: 7, pumpstations: 14, equipment: 11 };  // 카카오 점 크기(px)
